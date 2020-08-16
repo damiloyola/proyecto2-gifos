@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACAA;;kBAEkB;AAOlB;;kBAEkB",
     "sources": [
-        "style.scss"
+        "style.scss",
+        "partials/_variables.scss"
     ],
     "names": [],
     "file": "style.css"
