@@ -1,5 +1,15 @@
 /********COLORES*********/
 /*********FUENTES********/
+#hero .hero__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+#hero .hero__search input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +29,45 @@
 
 #header .header__menu .menu__ul {
   display: none;
+}
+
+#hero .hero__title {
+  text-align: center;
+  color: #572ee5;
+  padding: 0 2.75rem;
+}
+
+#hero .hero__title span {
+  color: #50e3c2;
+}
+
+#hero .hero__img {
+  display: block;
+  margin: 2rem auto 0;
+}
+
+#hero .hero__search {
+  padding: 0 1.25rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+#hero .hero__search input {
+  border: 1px solid #572ee5;
+  border-radius: 27px;
+  background-color: #fff;
+  width: 100%;
+  padding: 0.85rem 3.5rem;
+  outline: none;
+}
+
+#hero .hero__search .search__icon {
+  position: absolute;
+  top: 50%;
+  right: 2.25rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 * {
