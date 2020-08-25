@@ -1,1 +1,13 @@
 @import "partials/variables";
+@import "partials/header";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  border-top: 5px solid $violet;
+  border-bottom: 5px solid $violet;
+}

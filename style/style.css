@@ -1,3 +1,35 @@
 /********COLORES*********/
 /*********FUENTES********/
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+#header .header__logo {
+  width: 3.5rem;
+}
+
+#header .header__menu .menu__ul {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  border-top: 5px solid #572ee5;
+  border-bottom: 5px solid #572ee5;
+}
 /*# sourceMappingURL=style.css.map */

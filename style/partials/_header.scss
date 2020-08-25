@@ -1,0 +1,16 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  .header__logo {
+    width: 3.5rem;
+  }
+  .header__menu {
+    .menu__burguer {
+    }
+    .menu__ul {
+      display: none;
+    }
+  }
+}
