@@ -5,9 +5,11 @@
   padding: 1rem 1.5rem;
   .header__logo {
     width: 3.5rem;
+    cursor: pointer;
   }
   .header__menu {
     .menu__burguer {
+      cursor: pointer;
     }
     .menu__ul {
       display: none;

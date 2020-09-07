@@ -1,6 +1,11 @@
 /********COLORES*********/
 /*********FUENTES********/
-#hero .hero__title {
+#hero .hero__trending ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+#hero .hero__title, #hero .hero__trending h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -25,6 +30,11 @@
 
 #header .header__logo {
   width: 3.5rem;
+  cursor: pointer;
+}
+
+#header .header__menu .menu__burguer {
+  cursor: pointer;
 }
 
 #header .header__menu .menu__ul {
@@ -44,6 +54,8 @@
 #hero .hero__img {
   display: block;
   margin: 2rem auto 0;
+  width: 100%;
+  max-width: 400px;
 }
 
 #hero .hero__search {
@@ -60,6 +72,7 @@
   width: 100%;
   padding: 0.85rem 3.5rem;
   outline: none;
+  font-size: 16px;
 }
 
 #hero .hero__search .search__icon {
@@ -68,6 +81,40 @@
   right: 2.25rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+#hero .hero__trending {
+  width: 50%;
+  margin: 31px auto;
+  text-align: center;
+}
+
+#hero .hero__trending h3 {
+  color: #572ee5;
+}
+
+#hero .hero__trending ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+#hero .hero__trending ul li {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#hero .hero__trending ul li a {
+  text-decoration: none;
+  color: #572ee5;
+  font-size: 14px;
 }
 
 * {
@@ -80,5 +127,6 @@
 body {
   border-top: 5px solid #572ee5;
   border-bottom: 5px solid #572ee5;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

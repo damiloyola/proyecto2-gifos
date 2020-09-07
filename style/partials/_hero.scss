@@ -11,6 +11,8 @@
   .hero__img {
     display: block;
     margin: 2rem auto 0;
+    width: 100%;
+    max-width: 400px;
   }
   .hero__search {
     padding: 0 1.25rem;
@@ -24,6 +26,7 @@
       width: 100%;
       padding: 0.85rem 3.5rem;
       outline: none;
+      font-size: 16px;
       @extend %roboto-regular;
     }
     .search__icon {
@@ -31,6 +34,34 @@
       top: 50%;
       right: 2.25rem;
       transform: translateY(-50%);
+    }
+  }
+
+  .hero__trending {
+    width: 50%;
+    margin: 31px auto;
+    text-align: center;
+    h3 {
+      color: $violet;
+      @extend %montserrat-bold;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+
+      li {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        a {
+          text-decoration: none;
+          color: $violet;
+          @extend %montserrat-medium;
+          font-size: 14px;
+        }
+      }
     }
   }
 }
