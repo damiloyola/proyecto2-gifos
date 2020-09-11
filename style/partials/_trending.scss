@@ -1,0 +1,23 @@
+#trend {
+  background-color: #f3f5f8;
+  padding: 50px 0 80px 20px;
+  .trend__title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      @extend %montserrat-bold;
+      color: $violet;
+    }
+    p {
+      @extend %roboto-regular;
+    }
+  }
+  .trend__imgs {
+    text-align: center;
+    overflow: hidden;
+  }
+}

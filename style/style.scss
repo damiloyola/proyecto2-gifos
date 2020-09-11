@@ -1,6 +1,8 @@
 @import "partials/variables";
 @import "partials/header";
 @import "partials/hero";
+@import "partials/trending";
+@import "partials/footer";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,4 +13,7 @@ body {
   border-top: 5px solid $violet;
   border-bottom: 5px solid $violet;
   font-size: 16px;
+}
+a {
+  text-decoration: none;
 }

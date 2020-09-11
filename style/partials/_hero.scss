@@ -65,3 +65,17 @@
     }
   }
 }
+
+@media (min-width: 720px) {
+  #hero {
+    padding: 5% 0;
+    .hero__title {
+      font-size: 35px;
+      width: 50%;
+      margin: 0 auto;
+    }
+    .hero__search {
+      margin-bottom: 5%;
+    }
+  }
+}
