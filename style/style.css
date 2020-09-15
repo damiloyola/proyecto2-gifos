@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+#header .header__menu .hide {
+  display: none;
+}
+
 #header .header__menu .menu__ul {
   position: absolute;
   top: 100%;

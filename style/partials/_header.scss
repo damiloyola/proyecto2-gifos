@@ -12,6 +12,9 @@
     .menu__burguer {
       cursor: pointer;
     }
+    .hide {
+      display: none;
+    }
     .menu__ul {
       @extend %montserrat-bold;
       position: absolute;
@@ -57,6 +60,7 @@
         align-content: center;
         background-color: white;
         padding: 0;
+
         hr {
           display: none;
         }
