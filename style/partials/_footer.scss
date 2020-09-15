@@ -12,9 +12,32 @@
     }
     a {
       color: #cdd6e0;
+      transition: 0.5s;
+      &:hover {
+        color: $violet;
+      }
       i {
         font-size: 20px;
         margin: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5% 5%;
+    .footer__social {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      p {
+        height: 15px;
+        margin: 0;
       }
     }
   }
