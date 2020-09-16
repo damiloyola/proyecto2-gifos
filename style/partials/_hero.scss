@@ -18,7 +18,15 @@
     padding: 0 1.25rem;
     max-width: 30rem;
     margin: 0 auto;
-    position: relative;
+
+    .search__container {
+      position: relative;
+    }
+
+    .searching {
+      border-radius: 27px 27px 0 0;
+      border-bottom: 2px solid #9cafc3;
+    }
     input {
       border: 1px solid $violet;
       border-radius: 27px;
@@ -28,6 +36,20 @@
       outline: none;
       font-size: 16px;
       @extend %roboto-regular;
+    }
+    .search__recomend {
+      width: 100%;
+      border: 1px solid $violet;
+      border-top: none;
+      border-radius: 0 0 27px 27px;
+      padding: 2% 12%;
+      list-style: none;
+      list-style-image: url("/assets/icon-search.svg");
+      .recomend__result {
+        @extend %roboto-regular;
+        padding: 2%;
+        color: #9cafc3;
+      }
     }
     .search__icon {
       position: absolute;

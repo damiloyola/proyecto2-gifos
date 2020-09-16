@@ -12,9 +12,7 @@
     .menu__burguer {
       cursor: pointer;
     }
-    .hide {
-      display: none;
-    }
+
     .menu__ul {
       @extend %montserrat-bold;
       position: absolute;

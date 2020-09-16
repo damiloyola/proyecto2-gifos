@@ -6,10 +6,23 @@ const urlSearch =
 const searchInput = document.getElementById("searchInput");
 
 const search = async (text) => {
+  const ul = document.querySelector(".search__recomend");
+  if (text === "") {
+    ul.classList.add("hide");
+    searchInput.classList.remove("searching");
+  } else {
+    ul.classList.remove("hide");
+    ul.innerHTML = "";
+    searchInput.classList.add("searching");
+  }
+
   const response = await fetch(urlSearch + text + "&limit=4");
   const results = await response.json();
   results.data.forEach((i) => {
-    console.log(i.title);
+    const li = document.createElement("li");
+    li.classList.add("recomend__result");
+    li.innerHTML = i.title;
+    ul.appendChild(li);
   });
 };
 searchInput.addEventListener("input", () => search(searchInput.value));
