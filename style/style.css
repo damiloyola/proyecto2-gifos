@@ -5,7 +5,7 @@
   font-weight: 500;
 }
 
-#header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2 {
+#header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .vermas {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -330,6 +330,58 @@
   #footer .footer__social p {
     height: 15px;
     margin: 0;
+  }
+}
+
+#content .search__result .result__title {
+  color: #572ee5;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+  padding: 50px 0;
+  border-top: 1px solid #9cafc3;
+}
+
+#content .search__result .result__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content .search__result .result__gallery div {
+  padding: 5%;
+}
+
+#content .search__result .result__gallery div img {
+  width: 150px;
+  height: 120px;
+  cursor: pointer;
+}
+
+#content .search__result .vermas {
+  color: #572ee5;
+  padding: 8px 16px;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  display: block;
+  width: 127px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+@media (min-width: 700px) {
+  #content .search__result .result__gallery div {
+    padding: 2%;
+  }
+  #content .search__result .result__gallery div img {
+    width: 220px;
+    height: 160px;
   }
 }
 
