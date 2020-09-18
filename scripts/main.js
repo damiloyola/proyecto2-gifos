@@ -4,16 +4,19 @@
 const urlSearch =
   "https://api.giphy.com/v1/gifs/search?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ&q=";
 const searchInput = document.getElementById("searchInput");
+const ulSearch = document.querySelector(".search__recomend");
+const searchIcon = document.querySelector(".search__icon");
 
 const search = async (text) => {
-  const ul = document.querySelector(".search__recomend");
   if (text === "") {
-    ul.classList.add("hide");
+    ulSearch.classList.add("hide");
     searchInput.classList.remove("searching");
+    searchIcon.src = "assets/icon-search.svg";
   } else {
-    ul.classList.remove("hide");
-    ul.innerHTML = "";
+    ulSearch.classList.remove("hide");
+    ulSearch.innerHTML = "";
     searchInput.classList.add("searching");
+    searchIcon.src = "assets/close.svg";
   }
 
   const response = await fetch(urlSearch + text + "&limit=4");
@@ -22,20 +25,29 @@ const search = async (text) => {
     const li = document.createElement("li");
     li.classList.add("recomend__result");
     li.innerHTML = i.title;
-    ul.appendChild(li);
+    ulSearch.appendChild(li);
   });
 };
+searchIcon.addEventListener("click", () => {
+  searchInput.value = "";
+  searchIcon.src = "assets/icon-search.svg";
+});
+searchInput.addEventListener("focusout", () => {
+  ulSearch.classList.add("hide");
+  searchInput.classList.remove("searching");
+});
+searchInput.addEventListener("focus", () => search(searchInput.value));
 searchInput.addEventListener("input", () => search(searchInput.value));
 
 //MENU BURGER
 const btnBurger = document.querySelector(".menu__burguer");
-const ul = document.querySelector(".menu__ul");
+const ulMenu = document.querySelector(".menu__ul");
 const burgerToggle = () => {
-  if (ul.classList.contains("hide")) {
-    ul.classList.remove("hide");
+  if (ulMenu.classList.contains("hide")) {
+    ulMenu.classList.remove("hide");
     btnBurger.src = "assets/close.svg";
   } else {
-    ul.classList.add("hide");
+    ulMenu.classList.add("hide");
     btnBurger.src = "assets/burger.svg";
   }
 };
