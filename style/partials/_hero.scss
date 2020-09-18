@@ -49,8 +49,14 @@
         @extend %roboto-regular;
         padding: 2%;
 
-        a {
+        button {
+          border: none;
+          background-color: white;
+          outline: none;
+          cursor: pointer;
           color: #9cafc3;
+
+          height: 100%;
         }
       }
     }

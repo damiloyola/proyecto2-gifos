@@ -24,7 +24,7 @@ const searchBar = async (text) => {
   results.data.forEach((i) => {
     const li = document.createElement("li");
     li.classList.add("recomend__result");
-    li.innerHTML = `<a href=#>${i.title}</a>`;
+    li.innerHTML = `<button onclick="search('${i.title}')">${i.title}</button>`;
     ulSearch.appendChild(li);
   });
 };
@@ -33,19 +33,48 @@ searchIcon.addEventListener("click", () => {
   searchInput.value = "";
   searchIcon.src = "assets/icon-search.svg";
 });
-searchInput.addEventListener("focusout", () => {
-  ulSearch.classList.add("hide");
-  searchInput.classList.remove("searching");
+searchInput.addEventListener("keypress", (e) => {
+  if (e.charCode === 13) {
+    search(searchInput.value);
+    ulSearch.classList.add("hide");
+    searchInput.classList.remove("searching");
+    searchInput.value = "";
+    searchIcon.src = "assets/icon-search.svg";
+  }
 });
+
 searchInput.addEventListener("focus", () => searchBar(searchInput.value));
 searchInput.addEventListener("input", () => searchBar(searchInput.value));
 
 //SEARCH RESULT
 
 const search = async (word) => {
-  const res = await fetch(urlSearch + word + "&limit=12");
+  ulSearch.classList.add("hide");
+  searchInput.classList.remove("searching");
+  window.scrollTo({ top: 750, behavior: "smooth" });
+  const res = await fetch(urlSearch + word + "&limit=18");
   const data = await res.json();
-  console.log(data);
+  title = document.querySelector(".result__title");
+  title.innerHTML = word;
+  const container = document.querySelector(".result__gallery");
+  for (let i = 0; i < 18; i++) {
+    if (i < 12) {
+      const div = document.createElement("div");
+      const img = document.createElement("img");
+      img.src = data.data[i].images.original.url;
+      div.appendChild(img);
+      container.appendChild(div);
+      console.log(data.data[i]);
+    } else {
+      const div = document.createElement("div");
+      const img = document.createElement("img");
+      img.src = data.data[i].images.original.url;
+      div.classList.add("hide");
+      div.appendChild(img);
+      container.appendChild(div);
+      console.log(data.data[i]);
+    }
+  }
 };
 
 //MENU BURGER

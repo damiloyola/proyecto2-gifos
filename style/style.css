@@ -190,8 +190,13 @@
   padding: 2%;
 }
 
-#hero .hero__search .search__recomend .recomend__result a {
+#hero .hero__search .search__recomend .recomend__result button {
+  border: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
   color: #9cafc3;
+  height: 100%;
 }
 
 #hero .hero__search .search__icon {
