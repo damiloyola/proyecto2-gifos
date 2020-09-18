@@ -48,7 +48,10 @@
       .recomend__result {
         @extend %roboto-regular;
         padding: 2%;
-        color: #9cafc3;
+
+        a {
+          color: #9cafc3;
+        }
       }
     }
     .search__icon {

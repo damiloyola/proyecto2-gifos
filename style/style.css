@@ -188,6 +188,9 @@
 
 #hero .hero__search .search__recomend .recomend__result {
   padding: 2%;
+}
+
+#hero .hero__search .search__recomend .recomend__result a {
   color: #9cafc3;
 }
 
