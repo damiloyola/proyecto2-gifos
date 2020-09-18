@@ -49,14 +49,17 @@ searchInput.addEventListener("input", () => searchBar(searchInput.value));
 //SEARCH RESULT
 
 const search = async (word) => {
+  document.querySelector(".search__result").classList.remove("hide");
   ulSearch.classList.add("hide");
   searchInput.classList.remove("searching");
   window.scrollTo({ top: 750, behavior: "smooth" });
+  const container = document.querySelector(".result__gallery");
+  container.innerHTML = "";
   const res = await fetch(urlSearch + word + "&limit=18");
   const data = await res.json();
   title = document.querySelector(".result__title");
   title.innerHTML = word;
-  const container = document.querySelector(".result__gallery");
+
   for (let i = 0; i < 18; i++) {
     if (i < 12) {
       const div = document.createElement("div");
@@ -64,7 +67,6 @@ const search = async (word) => {
       img.src = data.data[i].images.original.url;
       div.appendChild(img);
       container.appendChild(div);
-      console.log(data.data[i]);
     } else {
       const div = document.createElement("div");
       const img = document.createElement("img");
@@ -72,7 +74,6 @@ const search = async (word) => {
       div.classList.add("hide");
       div.appendChild(img);
       container.appendChild(div);
-      console.log(data.data[i]);
     }
   }
 };
