@@ -72,11 +72,29 @@ const search = async (word) => {
       const img = document.createElement("img");
       img.src = data.data[i].images.original.url;
       div.classList.add("hide");
+      div.classList.add("hiddenDiv");
       div.appendChild(img);
       container.appendChild(div);
     }
   }
+  vermas.innerHTML = "Ver Mas";
 };
+
+const vermas = document.querySelector(".vermas");
+const vermasBtn = (e) => {
+  e.preventDefault();
+  const hiddenDivs = document.querySelectorAll(".result__gallery .hiddenDiv");
+
+  if (vermas.innerHTML === "Ver Mas") {
+    hiddenDivs.forEach((i) => i.classList.remove("hide"));
+    vermas.innerHTML = "Ver Menos";
+  } else {
+    console.log(hiddenDivs);
+    hiddenDivs.forEach((i) => i.classList.add("hide"));
+    vermas.innerHTML = "Ver Mas";
+  }
+};
+vermas.addEventListener("click", vermasBtn);
 
 //MENU BURGER
 const btnBurger = document.querySelector(".menu__burguer");
