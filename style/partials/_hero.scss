@@ -1,4 +1,5 @@
 #hero {
+  padding: 170px 0;
   .hero__title {
     text-align: center;
     color: $violet;
@@ -99,7 +100,6 @@
 
 @media (min-width: 720px) {
   #hero {
-    padding: 5% 0;
     .hero__title {
       font-size: 35px;
       width: 50%;
