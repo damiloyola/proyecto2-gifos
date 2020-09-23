@@ -24,8 +24,10 @@ const headerScroll = () => {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     header.style.padding = "1.5% 6%";
     header.style.boxShadow = "0 2px 4px 1px rgba(156,175,195,0.55)";
+    document.querySelector(".header__search").classList.remove("hide");
   } else {
     header.style.padding = "2% 10%";
     header.style.boxShadow = "none";
+    document.querySelector(".header__search").classList.add("hide");
   }
 };

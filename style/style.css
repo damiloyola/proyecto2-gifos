@@ -72,7 +72,7 @@
     width: 3.5rem;
   }
   .header__container #header .header__menu {
-    width: 45%;
+    width: 80%;
     min-width: 500px;
   }
   .header__container #header .header__menu .menu__burguer {
@@ -87,9 +87,8 @@
     display: -ms-flexbox;
     display: flex;
     list-style: none;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: white;
@@ -117,6 +116,54 @@
   }
   .header__container #header .header__menu .menu__ul li a:active {
     color: #9cafc3;
+  }
+  .header__container #header .header__menu .menu__ul li .header__search {
+    padding: 0 1.25rem;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+  .header__container #header .header__menu .menu__ul li .header__search .header_search__container {
+    position: relative;
+  }
+  .header__container #header .header__menu .menu__ul li .header__search .searching {
+    border-radius: 27px 27px 0 0;
+    border-bottom: 2px solid #9cafc3;
+  }
+  .header__container #header .header__menu .menu__ul li .header__search input {
+    border: 1px solid #572ee5;
+    border-radius: 27px;
+    background-color: #fff;
+    width: 100%;
+    padding: 0.85rem 3.5rem;
+    outline: none;
+    font-size: 16px;
+  }
+  .header__container #header .header__menu .menu__ul li .header__search .header_search__recomend {
+    width: 100%;
+    border: 1px solid #572ee5;
+    border-top: none;
+    border-radius: 0 0 27px 27px;
+    padding: 2% 12%;
+    list-style: none;
+    list-style-image: url("/assets/icon-search.svg");
+  }
+  .header__container #header .header__menu .menu__ul li .header__search .header_search__recomend .header_recomend__result {
+    padding: 2%;
+  }
+  .header__container #header .header__menu .menu__ul li .header__search .header_search__recomend .header_recomend__result button {
+    border: none;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    color: #9cafc3;
+    height: 100%;
+  }
+  .header__container #header .header__menu .menu__ul li .header__search .header_search__icon {
+    position: absolute;
+    top: 50%;
+    right: 2.25rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .header__container #header .header__menu .menu__ul li .btn__menu {
     background-image: url("/assets/button-crear-gifo.svg");

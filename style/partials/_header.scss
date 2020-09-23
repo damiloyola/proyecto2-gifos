@@ -53,7 +53,7 @@
         width: 3.5rem;
       }
       .header__menu {
-        width: 45%;
+        width: 80%;
         min-width: 500px;
 
         .menu__burguer {
@@ -64,7 +64,7 @@
           height: fit-content;
           display: flex;
           list-style: none;
-          justify-content: space-between;
+          justify-content: space-around;
           align-content: center;
           background-color: white;
           padding: 0;
@@ -91,6 +91,57 @@
                 color: #9cafc3;
               }
             }
+            .header__search {
+              padding: 0 1.25rem;
+              max-width: 30rem;
+              margin: 0 auto;
+              .header_search__container {
+                position: relative;
+              }
+
+              .searching {
+                border-radius: 27px 27px 0 0;
+                border-bottom: 2px solid #9cafc3;
+              }
+              input {
+                border: 1px solid $violet;
+                border-radius: 27px;
+                background-color: #fff;
+                width: 100%;
+                padding: 0.85rem 3.5rem;
+                outline: none;
+                font-size: 16px;
+              }
+              .header_search__recomend {
+                width: 100%;
+                border: 1px solid $violet;
+                border-top: none;
+                border-radius: 0 0 27px 27px;
+                padding: 2% 12%;
+                list-style: none;
+                list-style-image: url("/assets/icon-search.svg");
+                .header_recomend__result {
+                  padding: 2%;
+
+                  button {
+                    border: none;
+                    background-color: white;
+                    outline: none;
+                    cursor: pointer;
+                    color: #9cafc3;
+
+                    height: 100%;
+                  }
+                }
+              }
+              .header_search__icon {
+                position: absolute;
+                top: 50%;
+                right: 2.25rem;
+                transform: translateY(-50%);
+              }
+            }
+
             .btn__menu {
               background-image: url("/assets/button-crear-gifo.svg");
               background-size: cover;
