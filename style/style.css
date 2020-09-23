@@ -382,6 +382,13 @@
   width: 127px;
   text-align: center;
   margin: 50px auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#content .search__result .vermas:hover {
+  color: white;
+  background-color: #572ee5;
 }
 
 @media (min-width: 700px) {
