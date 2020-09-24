@@ -4,8 +4,10 @@ const urlSearch =
 //! ELEMENTOS DEL DOM
 
 const searchInput = document.getElementById("searchInput");
+const headerSearchInput = document.getElementById("header_searchInput");
 const ulSearch = document.querySelector(".search__recomend");
 const searchIcon = document.querySelector(".search__icon");
+const headerSearchIcon = document.querySelector(".header_search__icon");
 const result__gallery = document.querySelector(".result__gallery");
 const result__title = document.querySelector(".result__title");
 const vermas = document.querySelector(".vermas");
@@ -105,6 +107,15 @@ searchInput.addEventListener("keypress", (e) => {
     hideRecomended();
   }
 });
+headerSearchInput.addEventListener("keypress", (e) => {
+  if (e.charCode === 13) {
+    search(headerSearchInput.value);
+    hideRecomended();
+  }
+});
+headerSearchIcon.addEventListener("click", () =>
+  search(headerSearchInput.value)
+);
 //listeners que muestran resultados recomendados cada vez qeu se presiona una tecla en la barra de busqueda
 searchInput.addEventListener("focus", () =>
   autocompleteSearch(searchInput.value)
