@@ -35,3 +35,28 @@ const headerScroll = () => {
     document.querySelector(".header__search").classList.add("hide");
   }
 };
+
+//! TRENDING
+
+const trending = async () => {
+  url =
+    "https://api.giphy.com/v1/gifs/trending?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
+
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+  return data;
+};
+
+const displayTrend = async () => {
+  const arr = await trending();
+  console.log(arr);
+  const trends = document.querySelectorAll(".trends");
+
+  for (let i = 0; i < trends.length; i++) {
+    trends[i].innerHTML = arr.data[i].username + ", ";
+    trends[i].setAttribute("onclick", "search('" + arr.data[i].username + "')");
+  }
+};
+
+displayTrend();

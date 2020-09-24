@@ -1,6 +1,6 @@
 /********COLORES*********/
 /*********FUENTES********/
-#hero .hero__trending ul li a {
+#hero .hero__trending ul li button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
@@ -185,7 +185,8 @@
 }
 
 #hero {
-  padding: 170px 0;
+  padding-top: 170px;
+  padding-bottom: 70px;
 }
 
 #hero .hero__title {
@@ -289,10 +290,20 @@
   margin-bottom: 5px;
 }
 
-#hero .hero__trending ul li a {
+#hero .hero__trending ul li button {
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
   text-decoration: none;
   color: #572ee5;
   font-size: 14px;
+  border: 2px solid white;
+  background-color: white;
+}
+
+#hero .hero__trending ul li button:hover {
+  border-bottom: 2px solid #50e3c2;
 }
 
 @media (min-width: 720px) {

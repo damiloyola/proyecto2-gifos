@@ -1,5 +1,6 @@
 #hero {
-  padding: 170px 0;
+  padding-top: 170px;
+  padding-bottom: 70px;
   .hero__title {
     text-align: center;
     color: $violet;
@@ -87,11 +88,19 @@
       li {
         margin-right: 5px;
         margin-bottom: 5px;
-        a {
+        button {
+          cursor: pointer;
+          transition: 0.5s;
+          outline: none;
           text-decoration: none;
           color: $violet;
           @extend %montserrat-medium;
           font-size: 14px;
+          border: 2px solid white;
+          background-color: white;
+          &:hover {
+            border-bottom: 2px solid $aqua;
+          }
         }
       }
     }
