@@ -22,7 +22,7 @@ window.onscroll = function () {
 const headerScroll = () => {
   let header = document.getElementById("header");
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    header.style.padding = "1.5% 6%";
+    header.style.padding = "1% 6%";
     header.style.boxShadow = "0 2px 4px 1px rgba(156,175,195,0.55)";
     if (window.innerWidth > 1080) {
       document.querySelector(".header__search").classList.remove("hide");
@@ -38,25 +38,27 @@ const headerScroll = () => {
 
 //! TRENDING
 
-const trending = async () => {
-  url =
-    "https://api.giphy.com/v1/gifs/trending?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
+const trendingTags = async () => {
+  let url =
+    "https://api.giphy.com/v1/trending/searches?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
 
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
+
   return data;
 };
 
-const displayTrend = async () => {
-  const arr = await trending();
-  console.log(arr);
+const displayTrendTags = async () => {
+  const arr = await trendingTags();
+
   const trends = document.querySelectorAll(".trends");
 
   for (let i = 0; i < trends.length; i++) {
-    trends[i].innerHTML = arr.data[i].username + ", ";
-    trends[i].setAttribute("onclick", "search('" + arr.data[i].username + "')");
+    trends[i].innerHTML = arr.data[i] + ", ";
+    trends[i].setAttribute("onclick", "search('" + arr.data[i] + "', 0 )");
   }
 };
 
-displayTrend();
+displayTrendTags();
+
+const trendingGifs = async () => {};

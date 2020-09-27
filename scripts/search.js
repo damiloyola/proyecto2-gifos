@@ -11,19 +11,33 @@ const headerSearchIcon = document.querySelector(".header_search__icon");
 const result__gallery = document.querySelector(".result__gallery");
 const result__title = document.querySelector(".result__title");
 const vermas = document.querySelector(".vermas");
+let searchWord = "";
+let offsetSearch = 0;
+let searchGifos = [];
 
 //! FUNCIONES SEARCH
 
 //funcion principal que busca la palabra que se pasa por parametro y muestra en galeria
-const search = async (word) => {
+const search = async (word, offset) => {
+  searchWord = word;
   hideRecomended();
-  window.scrollTo({ top: 750, behavior: "smooth" });
+  let limit = 6;
   result__title.innerHTML = word;
-
+  if (offset === 0) {
+    searchGifos = [];
+    limit = 12;
+  }
   //se hace fetch con busqueda del parametro
-  const res = await fetch(urlSearch + word + "&limit=18");
-  const data = await res.json();
-  populateGallery(data);
+  const res = await fetch(
+    urlSearch + word + "&limit=" + limit + "&offset=" + offset
+  );
+  const datos = await res.json();
+
+  datos.data.forEach((i) => {
+    let img = i.images.original.url;
+    searchGifos.push(img);
+  });
+  populateGallery(searchGifos);
 };
 
 //funcion para obtener resultados recomendados segun texto pasado por parametro
@@ -44,54 +58,40 @@ const autocompleteSearch = async (text) => {
   results.data.forEach((i) => {
     const li = document.createElement("li");
     li.classList.add("recomend__result");
-    li.innerHTML = `<button onclick="search('${i.title}')">${i.title}</button>`;
+    li.innerHTML = `<button onclick="search('${i.title}', ${offsetSearch})">${i.title}</button>`;
     ulSearch.appendChild(li);
   });
 };
 
 //funcion que va colocando los gifs del array pasado por parametro dentro de la galeria
 const populateGallery = (arr) => {
-  document.querySelector(".search__result").classList.remove("hide");
+  if (offsetSearch === 0) {
+    document.querySelector(".search__result").classList.remove("hide");
+    window.scrollTo({ top: 750, behavior: "smooth" });
+  }
   result__gallery.innerHTML = "";
-  vermas.innerHTML = "Ver Mas";
-  for (let i = 0; i < 18; i++) {
-    if (i < 12) {
-      const div = document.createElement("div");
-      const img = document.createElement("img");
-      img.src = arr.data[i].images.original.url;
-      div.appendChild(img);
-      result__gallery.appendChild(div);
-    } else {
-      const div = document.createElement("div");
-      const img = document.createElement("img");
-      img.src = arr.data[i].images.original.url;
-      div.classList.add("hide");
-      div.classList.add("hiddenDiv");
-      div.appendChild(img);
-      result__gallery.appendChild(div);
-    }
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    const div = document.createElement("div");
+    const img = document.createElement("img");
+    img.src = arr[i];
+    div.appendChild(img);
+    result__gallery.appendChild(div);
+    offsetSearch += 1;
   }
 };
 
 //funcion que muestra mas o menos gifs cuando se presiona el boton ver mas/menos
 const vermasBtn = (e) => {
   e.preventDefault();
-  const hiddenDivs = document.querySelectorAll(".result__gallery .hiddenDiv");
-
-  if (vermas.innerHTML === "Ver Mas") {
-    hiddenDivs.forEach((i) => i.classList.remove("hide"));
-    vermas.innerHTML = "Ver Menos";
-  } else {
-    console.log(hiddenDivs);
-    hiddenDivs.forEach((i) => i.classList.add("hide"));
-    vermas.innerHTML = "Ver Mas";
-  }
+  search(searchWord, offsetSearch);
 };
 
 //funcion para ocultar recomendaciones de barra de busqueda
 const hideRecomended = () => {
   ulSearch.classList.add("hide");
   searchInput.classList.remove("searching");
+
   searchInput.value = "";
   searchIcon.src = "assets/icon-search.svg";
 };
@@ -103,23 +103,29 @@ searchIcon.addEventListener("click", hideRecomended);
 //listener para realizar busqueda cuando se presiona enter
 searchInput.addEventListener("keypress", (e) => {
   if (e.charCode === 13) {
-    search(searchInput.value);
+    searchWord = "";
+    offsetSearch = 0;
+    search(searchInput.value, offsetSearch);
+
     hideRecomended();
   }
 });
 headerSearchInput.addEventListener("keypress", (e) => {
   if (e.charCode === 13) {
-    search(headerSearchInput.value);
+    searchWord = "";
+    offsetSearch = 0;
+    search(headerSearchInput.value, offsetSearch);
+
     hideRecomended();
   }
 });
-headerSearchIcon.addEventListener("click", () =>
-  search(headerSearchInput.value)
-);
+headerSearchIcon.addEventListener("click", () => {
+  search(headerSearchInput.value, offsetSearch);
+});
 //listeners que muestran resultados recomendados cada vez qeu se presiona una tecla en la barra de busqueda
-searchInput.addEventListener("focus", () =>
-  autocompleteSearch(searchInput.value)
-);
+// searchInput.addEventListener("focus", () =>
+//   autocompleteSearch(searchInput.value)
+// );
 searchInput.addEventListener("input", () =>
   autocompleteSearch(searchInput.value)
 );
