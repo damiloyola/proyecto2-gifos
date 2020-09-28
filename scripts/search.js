@@ -67,8 +67,9 @@ const autocompleteSearch = async (text) => {
 const populateGallery = (arr) => {
   if (offsetSearch === 0) {
     document.querySelector(".search__result").classList.remove("hide");
-    window.scrollTo({ top: 750, behavior: "smooth" });
+    window.scrollTo({ top: 600, behavior: "smooth" });
   }
+
   result__gallery.innerHTML = "";
   console.log(arr);
   for (let i = 0; i < arr.length; i++) {
@@ -84,7 +85,16 @@ const populateGallery = (arr) => {
 //funcion que muestra mas o menos gifs cuando se presiona el boton ver mas/menos
 const vermasBtn = (e) => {
   e.preventDefault();
-  search(searchWord, offsetSearch);
+  if (vermas.innerHTML === "Ver Mas") {
+    search(searchWord, offsetSearch);
+    if (offsetSearch > 24) {
+      vermas.innerHTML = "Ver Menos";
+    }
+  } else {
+    offsetSearch = 0;
+    search(searchWord, offsetSearch);
+    vermas.innerHTML = "Ver Mas";
+  }
 };
 
 //funcion para ocultar recomendaciones de barra de busqueda

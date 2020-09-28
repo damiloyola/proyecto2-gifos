@@ -186,7 +186,6 @@
 
 #hero {
   padding-top: 170px;
-  padding-bottom: 70px;
 }
 
 #hero .hero__title {
@@ -265,6 +264,7 @@
 #hero .hero__trending {
   width: 50%;
   margin: 31px auto;
+  padding-bottom: 50px;
   text-align: center;
 }
 
