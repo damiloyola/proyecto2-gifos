@@ -1,62 +1,64 @@
 //! MENU BURGER
-const btnBurger = document.querySelector(".menu__burguer");
-const ulMenu = document.querySelector(".menu__ul");
+
 const burgerToggle = () => {
-  if (ulMenu.classList.contains("hide")) {
-    ulMenu.classList.remove("hide");
-    btnBurger.src = "assets/close.svg";
-  } else {
-    ulMenu.classList.add("hide");
-    btnBurger.src = "assets/burger.svg";
-  }
+    if ($burgerMenuUl.classList.contains("hide")) {
+        $burgerMenuUl.classList.remove("hide");
+        $burgerBtn.src = "assets/close.svg";
+    } else {
+        $burgerMenuUl.classList.add("hide");
+        $burgerBtn.src = "assets/burger.svg";
+    }
 };
 
-btnBurger.addEventListener("click", burgerToggle);
+$burgerBtn.addEventListener("click", burgerToggle);
 
 //! STICKY HEADER
 
 window.onscroll = function () {
-  headerScroll();
+    headerScroll();
 };
 
 const headerScroll = () => {
-  let header = document.getElementById("header");
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    header.style.padding = "1% 6%";
-    header.style.boxShadow = "0 2px 4px 1px rgba(156,175,195,0.55)";
-    if (window.innerWidth > 1080) {
-      document.querySelector(".header__search").classList.remove("hide");
+    let header = document.getElementById("header");
+    if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+    ) {
+        header.style.padding = "1% 6%";
+        header.style.boxShadow = "0 2px 4px 1px rgba(156,175,195,0.55)";
+        if (window.innerWidth > 1080) {
+            document.querySelector(".header__search").classList.remove("hide");
+        } else {
+            document.querySelector(".header__search").classList.add("hide");
+        }
     } else {
-      document.querySelector(".header__search").classList.add("hide");
+        header.style.padding = "2% 10%";
+        header.style.boxShadow = "none";
+        document.querySelector(".header__search").classList.add("hide");
     }
-  } else {
-    header.style.padding = "2% 10%";
-    header.style.boxShadow = "none";
-    document.querySelector(".header__search").classList.add("hide");
-  }
 };
 
 //! TRENDING
 
 const trendingTags = async () => {
-  let url =
-    "https://api.giphy.com/v1/trending/searches?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
+    let url =
+        "https://api.giphy.com/v1/trending/searches?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
 
-  const response = await fetch(url);
-  const data = await response.json();
+    const response = await fetch(url);
+    const data = await response.json();
 
-  return data;
+    return data;
 };
 
 const displayTrendTags = async () => {
-  const arr = await trendingTags();
+    const arr = await trendingTags();
 
-  const trends = document.querySelectorAll(".trends");
+    const trends = document.querySelectorAll(".trends");
 
-  for (let i = 0; i < trends.length; i++) {
-    trends[i].innerHTML = arr.data[i] + ", ";
-    trends[i].setAttribute("onclick", "search('" + arr.data[i] + "', 0 )");
-  }
+    for (let i = 0; i < trends.length; i++) {
+        trends[i].innerHTML = arr.data[i] + ", ";
+        trends[i].setAttribute("onclick", "search('" + arr.data[i] + "', 0 )");
+    }
 };
 
 displayTrendTags();
