@@ -21,16 +21,13 @@ let searchGifos = [];
 const search = async (word, offset) => {
   searchWord = word;
   hideRecomended();
-  let limit = 6;
+
   result__title.innerHTML = word;
   if (offset === 0) {
     searchGifos = [];
-    limit = 12;
   }
   //se hace fetch con busqueda del parametro
-  const res = await fetch(
-    urlSearch + word + "&limit=" + limit + "&offset=" + offset
-  );
+  const res = await fetch(urlSearch + word + "&limit=12" + "&offset=" + offset);
   const datos = await res.json();
 
   datos.data.forEach((i) => {
@@ -54,6 +51,7 @@ const autocompleteSearch = async (text) => {
   //se realiza el fetch y se guardan los datos en array results
   const response = await fetch(urlSearch + text + "&limit=4");
   const results = await response.json();
+
   //se recorre el array y se van mostrando los resultados como recomendados
   results.data.forEach((i) => {
     const li = document.createElement("li");
@@ -65,6 +63,7 @@ const autocompleteSearch = async (text) => {
 
 //funcion que va colocando los gifs del array pasado por parametro dentro de la galeria
 const populateGallery = (arr) => {
+  vermas.style.display = "block";
   if (offsetSearch === 0) {
     document.querySelector(".search__result").classList.remove("hide");
     window.scrollTo({ top: 600, behavior: "smooth" });
@@ -72,29 +71,33 @@ const populateGallery = (arr) => {
 
   result__gallery.innerHTML = "";
   console.log(arr);
-  for (let i = 0; i < arr.length; i++) {
-    const div = document.createElement("div");
-    const img = document.createElement("img");
-    img.src = arr[i];
-    div.appendChild(img);
-    result__gallery.appendChild(div);
-    offsetSearch += 1;
+  if (arr.length === 0) {
+    vermas.style.display = "none";
+    result__gallery.innerHTML = `
+   <div class ="search_error-container">
+   <img class="search_error-img"  src="assets/icon-busqueda-sin-resultado.svg" alt="Sin resultados de busqueda" >
+   <h4 class="search_error-text">Intenta con otra búsqueda.</h4>
+   </div>   
+ 
+
+      `;
+  } else {
+    for (let i = 0; i < arr.length; i++) {
+      const div = document.createElement("div");
+      const img = document.createElement("img");
+      img.src = arr[i];
+      div.appendChild(img);
+      result__gallery.appendChild(div);
+      offsetSearch += 1;
+    }
   }
 };
 
 //funcion que muestra mas o menos gifs cuando se presiona el boton ver mas/menos
 const vermasBtn = (e) => {
   e.preventDefault();
-  if (vermas.innerHTML === "Ver Mas") {
-    search(searchWord, offsetSearch);
-    if (offsetSearch > 24) {
-      vermas.innerHTML = "Ver Menos";
-    }
-  } else {
-    offsetSearch = 0;
-    search(searchWord, offsetSearch);
-    vermas.innerHTML = "Ver Mas";
-  }
+
+  search(searchWord, offsetSearch);
 };
 
 //funcion para ocultar recomendaciones de barra de busqueda

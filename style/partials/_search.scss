@@ -4,6 +4,7 @@
       color: #572ee5;
       @extend %montserrat-bold;
       text-align: center;
+      font-size: 25px;
       width: 30%;
       margin: 0 auto;
       padding: 25px 0;
@@ -21,6 +22,18 @@
           width: 150px;
           height: 120px;
           cursor: pointer;
+        }
+      }
+      .search_error-container {
+        text-align: center;
+        padding: 50px 0;
+        .search_error-img {
+          padding: 20px 0;
+        }
+        .search_error-text {
+          @extend %montserrat-bold;
+          font-size: 22px;
+          color: $aqua;
         }
       }
     }
@@ -46,6 +59,9 @@
 @media (min-width: 700px) {
   #content {
     .search__result {
+      .result__title {
+        font-size: 35px;
+      }
       .result__gallery {
         div {
           padding: 2%;
