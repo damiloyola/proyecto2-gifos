@@ -424,12 +424,18 @@
 
 #content .search__result .result__gallery div {
   padding: 5%;
+  position: relative;
 }
 
-#content .search__result .result__gallery div img {
+#content .search__result .result__gallery div .gif_result {
   width: 150px;
   height: 120px;
   cursor: pointer;
+}
+
+#content .search__result .result__gallery div .gif_hover {
+  position: absolute;
+  top: 0;
 }
 
 #content .search__result .result__gallery .search_error-container {
@@ -471,7 +477,7 @@
   #content .search__result .result__gallery div {
     padding: 2%;
   }
-  #content .search__result .result__gallery div img {
+  #content .search__result .result__gallery div .gif_result {
     width: 220px;
     height: 160px;
   }
