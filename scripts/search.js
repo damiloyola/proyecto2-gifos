@@ -74,22 +74,24 @@ const populateGallery = (arr) => {
     } else {
         for (let i = 0; i < arr.length; i++) {
             const div = document.createElement("div");
-
+            div.classList.add("result_container");
             div.innerHTML = `<img class="gif_result" src="${arr[i].images.original.url}" alt="${arr[i].title}"></img>
-                             <div class="gif_hover">
+                             <div class="gif_hover hide">
                                 <div class="gif_icons">
-                                    <img class="fav_icon" src="/assets/icon-fav.svg" alt="" srcset="">
-                                    <img class="download_icon" src="/assets/icon-download.svg" alt="">
-                                    <img class="big_icon" src="/assets/icon-max-normal.svg" alt="">               
+                                    <div class="icon iconFav"></div>
+                                    <div class="icon iconDownload"></div>
+                                    <div class="icon iconBig"></div>
+                                               
                                 </div>
                                 <div class="gif_details">
                                     <p class="gif_user">${arr[i].username}</p>
-                                    <h4 class="gif_title">${arr[i].title}</h4>                          
+                                    <h5 class="gif_title">${arr[i].title}</h5>                          
                                 </div>
                              </div>`;
             $resultGallery.appendChild(div);
             offsetSearch += 1;
         }
+        // addHovers();
     }
 };
 
@@ -107,6 +109,19 @@ const hideRecomended = () => {
 
     $searchInput.value = "";
     $searchIcon.src = "assets/icon-search.svg";
+};
+
+const addHovers = () => {
+    const $gifHover = document.querySelectorAll(".gif_hover");
+    const $gifResult = document.querySelectorAll(".gif_result");
+    for (let i = 0; i < $gifResult.length; i++) {
+        $gifResult[i].addEventListener("mouseover", () =>
+            $gifHover[i].classList.remove("hide")
+        );
+        $gifResult[i].addEventListener("mouseout", () =>
+            $gifHover[i].classList.remove("hide")
+        );
+    }
 };
 
 //! SEARCH LISTENERS

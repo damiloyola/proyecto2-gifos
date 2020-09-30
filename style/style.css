@@ -10,9 +10,14 @@
   font-weight: 700;
 }
 
-#hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer {
+#hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .header__container #header {
@@ -422,20 +427,98 @@
           justify-content: center;
 }
 
-#content .search__result .result__gallery div {
-  padding: 5%;
+#content .search__result .result__gallery .result_container {
+  padding: 20px;
   position: relative;
 }
 
-#content .search__result .result__gallery div .gif_result {
-  width: 150px;
-  height: 120px;
+#content .search__result .result__gallery .result_container .gif_result {
+  width: 190px;
+  height: 160px;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover {
+  display: block;
+  position: absolute;
+  top: 20px;
+  background-color: rgba(87, 46, 229, 0.7);
+  width: 190px;
+  height: 160px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover:hover {
+  opacity: 100;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .icon {
+  margin: 5px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
 }
 
-#content .search__result .result__gallery div .gif_hover {
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav {
+  background-image: url("/assets/icon-fav.svg");
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:hover {
+  background-image: url("/assets/icon-fav-hover.svg");
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:active {
+  background-image: url("/assets/icon-fav-active.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload {
+  background-image: url("/assets/icon-download.svg");
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload:hover {
+  background-image: url("/assets/icon-download-hover.svg");
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig {
+  background-image: url("/assets/icon-max-normal.svg");
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig:hover {
+  background-image: url("/assets/icon-max-hover.svg");
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_icons img {
+  cursor: pointer;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_details {
+  padding: 20px;
   position: absolute;
-  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user {
+  color: white;
+  font-size: 15px;
+}
+
+#content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title {
+  color: white;
+  font-size: 16px;
 }
 
 #content .search__result .result__gallery .search_error-container {
@@ -474,12 +557,19 @@
   #content .search__result .result__title {
     font-size: 35px;
   }
-  #content .search__result .result__gallery div {
-    padding: 2%;
+  #content .search__result .result__gallery .result_container {
+    padding: 20px;
   }
-  #content .search__result .result__gallery div .gif_result {
-    width: 220px;
-    height: 160px;
+  #content .search__result .result__gallery .result_container .gif_result {
+    width: 260px;
+    height: 200px;
+  }
+  #content .search__result .result__gallery .result_container .gif_hover {
+    position: absolute;
+    top: 20px;
+    background-color: rgba(87, 46, 229, 0.7);
+    width: 260px;
+    height: 200px;
   }
 }
 

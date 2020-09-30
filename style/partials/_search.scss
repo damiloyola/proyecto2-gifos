@@ -15,17 +15,80 @@
             flex-wrap: wrap;
             width: 100%;
             justify-content: center;
-            div {
-                padding: 5%;
+            .result_container {
+                padding: 20px;
                 position: relative;
                 .gif_result {
-                    width: 150px;
-                    height: 120px;
-                    cursor: pointer;
+                    width: 190px;
+                    height: 160px;
                 }
                 .gif_hover {
+                    display: block;
                     position: absolute;
-                    top: 0;
+                    top: 20px;
+                    background-color: transparentize(#572ee5, 0.3);
+                    width: 190px;
+                    height: 160px;
+                    opacity: 0;
+                    transition: 0.5s;
+                    &:hover {
+                        opacity: 100;
+                    }
+                    .gif_icons {
+                        padding: 10px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: flex;
+                        .icon {
+                            margin: 5px;
+                            width: 32px;
+                            height: 32px;
+                            cursor: pointer;
+                        }
+                        .iconFav {
+                            background-image: url("/assets/icon-fav.svg");
+                            &:hover {
+                                background-image: url("/assets/icon-fav-hover.svg");
+                            }
+                            &:active {
+                                background-image: url("/assets/icon-fav-active.png");
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                            }
+                        }
+                        .iconDownload {
+                            background-image: url("/assets/icon-download.svg");
+                            &:hover {
+                                background-image: url("/assets/icon-download-hover.svg");
+                            }
+                        }
+                        .iconBig {
+                            background-image: url("/assets/icon-max-normal.svg");
+                            &:hover {
+                                background-image: url("/assets/icon-max-hover.svg");
+                            }
+                        }
+                        img {
+                            cursor: pointer;
+                        }
+                    }
+                    .gif_details {
+                        padding: 20px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        .gif_user {
+                            @extend %roboto-regular;
+                            color: white;
+                            font-size: 15px;
+                        }
+                        .gif_title {
+                            @extend %roboto-black;
+                            color: white;
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
             .search_error-container {
@@ -67,11 +130,18 @@
                 font-size: 35px;
             }
             .result__gallery {
-                div {
-                    padding: 2%;
+                .result_container {
+                    padding: 20px;
                     .gif_result {
-                        width: 220px;
-                        height: 160px;
+                        width: 260px;
+                        height: 200px;
+                    }
+                    .gif_hover {
+                        position: absolute;
+                        top: 20px;
+                        background-color: transparentize(#572ee5, 0.3);
+                        width: 260px;
+                        height: 200px;
                     }
                 }
             }

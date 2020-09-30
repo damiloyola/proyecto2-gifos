@@ -40,10 +40,12 @@ const headerScroll = () => {
 
 //! TRENDING
 
-const trendingTags = async () => {
-    let url =
-        "https://api.giphy.com/v1/trending/searches?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
+let trendingTagsURL =
+    "https://api.giphy.com/v1/trending/searches?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
+let trendingGifURL =
+    "https://api.giphy.com/v1/gifs/trending?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
 
+const trending = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
 
@@ -51,7 +53,7 @@ const trendingTags = async () => {
 };
 
 const displayTrendTags = async () => {
-    const arr = await trendingTags();
+    const arr = await trending(trendingTagsURL);
 
     const trends = document.querySelectorAll(".trends");
 
@@ -62,5 +64,3 @@ const displayTrendTags = async () => {
 };
 
 displayTrendTags();
-
-const trendingGifs = async () => {};
