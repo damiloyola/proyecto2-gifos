@@ -1,5 +1,7 @@
-const urlSearch =
+const searchUrl =
     "https://api.giphy.com/v1/gifs/search?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ&q=";
+const recomendUrl =
+    "https://api.giphy.com/v1/gifs/search/tags?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ&q=";
 
 let searchWord = "";
 let offsetSearch = 0;
@@ -18,7 +20,7 @@ const search = async (word, offset) => {
     }
     //se hace fetch con busqueda del parametro
     const res = await fetch(
-        urlSearch + word + "&limit=12" + "&offset=" + offset
+        searchUrl + word + "&limit=12" + "&offset=" + offset
     );
     const datos = await res.json();
 
@@ -40,14 +42,14 @@ const autocompleteSearch = async (text) => {
         $searchIcon.src = "assets/close.svg";
     }
     //se realiza el fetch y se guardan los datos en array results
-    const response = await fetch(urlSearch + text + "&limit=4");
+    const response = await fetch(recomendUrl + text + "&limit=4");
     const results = await response.json();
 
     //se recorre el array y se van mostrando los resultados como recomendados
     results.data.forEach((i) => {
         const li = document.createElement("li");
         li.classList.add("recomend__result");
-        li.innerHTML = `<button onclick="search('${i.title}', ${offsetSearch})">${i.title}</button>`;
+        li.innerHTML = `<button onclick="search('${i.name}', ${offsetSearch})">${i.name}</button>`;
         $searchUlRecomend.appendChild(li);
     });
 };

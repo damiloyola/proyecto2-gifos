@@ -23,7 +23,7 @@
     <section class="header__container">
       <header id="header">
       
-        <a href="index.html"><img class= header__logo src="/assets/logo-desktop (1).svg" alt=""></a>
+      <a href="index.html"><img class= header__logo src="/assets/logo-desktop (1).svg" alt=""></a>
         <div class="header__menu">
           <img
             src="assets/burger.svg"
@@ -46,7 +46,7 @@
             </li>
             <li><a href="Modo oscuro">Modo oscuro</a></li>
             <hr />
-            <li><a href="fav.html">Favoritos</a></li>
+            <li><a href="#">Favoritos</a></li>
             <hr />
             <li><a href="misGif.html">Mis GifOs</a></li>
             <hr />
@@ -56,47 +56,17 @@
       </header>
     </section>
 
-    <!--------- HERO ---------->
-    <section id="hero">
-      <h1 class="hero__title">
-        Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span>
-      </h1>
-      <img
-        src="assets/ilustra_header.svg"
-        alt="ilustracion"
-        class="hero__img"
-      />
-      <div class="hero__search">
-        <div class="search__container">
-          <input id="searchInput" type="text" placeholder="Busca GIFOS y más" />
-          <a href="#search"
-            ><img
-              src="assets/icon-search.svg"
-              alt="icono de busqueda"
-              class="search__icon"
-          /></a>
-        </div>
-
-        <ul class="search__recomend hide"></ul>
-      </div>
-      <div class="hero__trending">
-        <h3>Trending:</h3>
-        <ul>
-          <li><button class = "trends" >Reactions,</button></li>
-          <li><button class = "trends">Entretainment,</button></li>
-          <li><button class = "trends">Sports,</button></li>
-          <li><button class = "trends">Stickers,</button></li>
-          <li><button class = "trends">Artists,</button></li>
-        </ul>
-      </div>
-    </section>
+ 
 
     <!--------- CONTENT ----------->
     <section id="content">
-      <div class="search__result hide">
-        <h3 class="result__title"></h3>
-        <div class="result__gallery"></div>
-        <a href="" class="vermas">Ver Mas</a>
+      <div class="content_title">
+        <img src="/assets/icon-favoritos.svg" alt="" class="content_icon">
+        <h3 class="content_text">Favoritos</h3>
+       <a href="index.html" class="btn_back">Volver</a>
+      </div>
+      <div class="fav_gallery">
+
       </div>
     </section>
 
@@ -123,6 +93,6 @@
     </section>
     <script src="/scripts/DOM.js"></script>
     <script src="/scripts/main.js"></script>
-    <script src="/scripts/search.js"></script>
+    
   </body>
 </html>
