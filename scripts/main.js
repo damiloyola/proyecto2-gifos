@@ -64,3 +64,53 @@ const displayTrendTags = async () => {
 };
 
 displayTrendTags();
+
+const displayTrendGifs = async (limit, offset) => {
+    const $trendGifs = document.querySelector(".trend__imgs");
+    $trendGifs.innerHTML = "";
+    const arr = await trending(
+        trendingGifURL + "&limit=" + limit + "&offset=" + offset
+    );
+    console.log(arr.data[0].images.original.url);
+    arr.data.forEach((i) => {
+        const div = document.createElement("div");
+        div.classList.add("result_container");
+        div.innerHTML = `<img class="gif_result" src="${i.images.original.url}" alt="${i.title}"></img>
+                       <div class="gif_hover hide">
+                          <div class="gif_icons">
+                              <div class="icon iconFav"></div>
+                              <div class="icon iconDownload"></div>
+                              <div class="icon iconBig"  onclick="showMax('${i.images.original.url}','${i.username}','${i.title}')"></div>
+                                         
+                          </div>
+                          <div class="gif_details">
+                              <p class="gif_user">${i.username}</p>
+                              <h5 class="gif_title">${i.title}</h5>                          
+                          </div>
+                       </div>`;
+
+        $trendGifs.appendChild(div);
+
+        const $gifHover = document.querySelector(".gif_hover");
+        div.addEventListener("mouseenter", (e) => {
+            $gifHover.classList.remove("hide");
+        });
+        div.addEventListener("mouseout", (e) => {
+            $gifHover.classList.add("hide");
+        });
+    });
+};
+
+displayTrendGifs(3, 0);
+offsetTrend = 0;
+const rightArrowTrend = () => {
+    offsetTrend += 1;
+    displayTrendGifs(3, offsetTrend);
+};
+
+const leftArrowTrend = () => {
+    if (offsetTrend > 0) {
+        offsetTrend -= 1;
+        displayTrendGifs(3, offsetTrend);
+    }
+};

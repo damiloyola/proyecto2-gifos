@@ -59,9 +59,9 @@ const populateGallery = (arr) => {
     $verMasBtn.style.display = "block";
     if (offsetSearch === 0) {
         document.querySelector(".search__result").classList.remove("hide");
-        window.scrollTo({ top: 600, behavior: "smooth" });
+        window.scrollTo({ top: 650, behavior: "smooth" });
     }
-
+    console.log(arr);
     $resultGallery.innerHTML = "";
     console.log(arr);
     if (arr.length < 12) {
@@ -82,7 +82,7 @@ const populateGallery = (arr) => {
                                 <div class="gif_icons">
                                     <div class="icon iconFav"></div>
                                     <div class="icon iconDownload"></div>
-                                    <div class="icon iconBig"></div>
+                                    <div class="icon iconBig" onclick="showMax('${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')"></div>
                                                
                                 </div>
                                 <div class="gif_details">

@@ -1,0 +1,73 @@
+.result_container {
+    margin: 20px;
+    position: relative;
+
+    .gif_hover {
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: transparentize(#572ee5, 0.3);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.5s;
+        &:hover {
+            opacity: 100;
+        }
+        .gif_icons {
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            .icon {
+                margin: 0 5px;
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+            }
+            .iconFav {
+                background-image: url("/assets/icon-fav.svg");
+                &:hover {
+                    background-image: url("/assets/icon-fav-hover.svg");
+                }
+                &:active {
+                    background-image: url("/assets/icon-fav-active.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+            .iconDownload {
+                background-image: url("/assets/icon-download.svg");
+                &:hover {
+                    background-image: url("/assets/icon-download-hover.svg");
+                }
+            }
+            .iconBig {
+                background-image: url("/assets/icon-max-normal.svg");
+                &:hover {
+                    background-image: url("/assets/icon-max-hover.svg");
+                }
+            }
+            img {
+                cursor: pointer;
+            }
+        }
+        .gif_details {
+            padding: 15px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            .gif_user {
+                @extend %roboto-regular;
+                color: white;
+                font-size: 15px;
+            }
+            .gif_title {
+                @extend %roboto-black;
+                color: white;
+                font-size: 16px;
+            }
+        }
+    }
+}

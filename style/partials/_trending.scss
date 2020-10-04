@@ -1,23 +1,79 @@
 #trend {
-  background-color: #f3f5f8;
-  padding: 50px 0 80px 20px;
-  .trend__title {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 20px;
-    h2 {
-      margin-bottom: 10px;
-      font-size: 20px;
-      @extend %montserrat-bold;
-      color: $violet;
+    background-color: #f3f5f8;
+    padding: 50px 0 80px 0;
+    .trend__title {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+        h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            @extend %montserrat-bold;
+            color: $violet;
+        }
+        p {
+            @extend %roboto-regular;
+        }
     }
-    p {
-      @extend %roboto-regular;
+    .trend__imgs {
+        justify-content: space-around;
+        display: flex;
+        overflow-x: scroll;
+        .left_arrow,
+        .right_arrow {
+            display: none;
+        }
+        .result_container {
+            min-width: 250px;
+            min-height: 190px;
+            margin: 20px;
+            .gif_result {
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
-  }
-  .trend__imgs {
-    text-align: center;
-    overflow: hidden;
-  }
+}
+
+@media (min-width: 970px) {
+    #trend {
+        .trend_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            .left_arrow {
+                outline: none;
+                border: none;
+                min-width: 40px;
+                height: 40px;
+                cursor: pointer;
+                background-image: url(/assets/button-slider-left.svg);
+                &:hover {
+                    background-image: url(/assets/button-slider-left-hover.svg);
+                }
+            }
+            .right_arrow {
+                outline: none;
+                border: none;
+                min-width: 40px;
+                height: 40px;
+                cursor: pointer;
+                background-image: url(/assets/button-slider-right.svg);
+                &:hover {
+                    background-image: url(/assets/button-slider-right-hover.svg);
+                }
+            }
+            .trend__imgs {
+                overflow-x: auto;
+
+                .result_container {
+                    width: 360px;
+                    height: 275px;
+                    margin: 20px;
+                }
+            }
+        }
+    }
 }

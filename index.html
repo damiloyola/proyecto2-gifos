@@ -91,6 +91,25 @@
       </div>
     </section>
 
+    <!-- MAX -->
+    <section id="max" class="hide">
+      <div class="max__close">
+        <img src="/assets/close.svg" alt="">
+      </div>
+      <img class="img_max" src="" alt="">
+      <div class="max_foot">
+        <div class="max_text">
+          <span class="max_user">User</span>
+          <h4 class="max_title">Titulo</h4>
+        </div>
+        <div class="max__btns">
+          <img src="/assets/icon-fav.svg" alt="">
+          <img src="/assets/icon-download.svg" alt="">
+        </div>
+      </div>
+      
+    </section>
+
     <!--------- CONTENT ----------->
     <section id="content">
       <div class="search__result hide">
@@ -106,9 +125,14 @@
         <h2>Trending GIFOS</h2>
         <p>Mira los ultimos GIFOS de nuestra comunidad.</p>
       </div>
-      <div class="trend__imgs">
-        <img src="https://dummyimage.com/250x180/000/fff" alt="" />
+      <div class="trend_container">
+        <button class="left_arrow" onclick="leftArrowTrend()"></button>
+        <div class="trend__imgs">
+         
+        </div>
+        <button class="right_arrow" onclick="rightArrowTrend()"></button>
       </div>
+      
     </section>
 
     <!--------- FOOTER ---------->
@@ -124,5 +148,6 @@
     <script src="/scripts/DOM.js"></script>
     <script src="/scripts/main.js"></script>
     <script src="/scripts/search.js"></script>
+    <script src="/scripts/events.js"></script>
   </body>
 </html>
