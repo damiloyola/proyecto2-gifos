@@ -5,19 +5,111 @@
   font-weight: 500;
 }
 
-.header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .result__gallery .search_error-container .search_error-text, #content .search__result .vermas, #content .content_title .content_text, #content .content_title .btn_back {
+.header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .result__gallery .search_error-container .search_error-text, #content .search__result .vermas, #fav_content .content_title .content_text, #fav_content .content_title .btn_back {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
-#hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer, .result_container .gif_hover .gif_details .gif_user, #max .max_foot .max_text .max_user {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user, #hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer, #max .max_foot .max_text .max_user {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-.result_container .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+}
+
+#trend .trend__imgs .result_container .gif_hover, #content .search__result .result__gallery .result_container .gif_hover, #fav_content .fav_gallery .result_container_fav .gif_hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: rgba(87, 46, 229, 0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#trend .trend__imgs .result_container .gif_hover:hover, #content .search__result .result__gallery .result_container .gif_hover:hover, #fav_content .fav_gallery .result_container_fav .gif_hover:hover {
+  opacity: 100;
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons, #content .search__result .result__gallery .result_container .gif_hover .gif_icons, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .icon, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .icon, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .icon {
+  margin: 0 5px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash {
+  background-image: url("/assets/icon-trash-normal.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash:hover {
+  background-image: url("/assets/icon-trash-hover.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav {
+  background-image: url("/assets/icon-fav.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:hover {
+  background-image: url("/assets/icon-fav-hover.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:active, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:active, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:active {
+  background-image: url("/assets/icon-fav-active.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload {
+  background-image: url("/assets/icon-download.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload:hover {
+  background-image: url("/assets/icon-download-hover.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig {
+  background-image: url("/assets/icon-max-normal.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig:hover {
+  background-image: url("/assets/icon-max-hover.svg");
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_icons img, #content .search__result .result__gallery .result_container .gif_hover .gif_icons img, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons img {
+  cursor: pointer;
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_details, #content .search__result .result__gallery .result_container .gif_hover .gif_details, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details {
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user {
+  color: white;
+  font-size: 15px;
+}
+
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title {
+  color: white;
+  font-size: 16px;
 }
 
 .header__container #header {
@@ -358,6 +450,7 @@
   min-width: 250px;
   min-height: 190px;
   margin: 20px;
+  position: relative;
 }
 
 #trend .trend__imgs .result_container .gif_result {
@@ -496,6 +589,11 @@
           justify-content: center;
 }
 
+#content .search__result .result__gallery .result_container {
+  margin: 20px;
+  position: relative;
+}
+
 #content .search__result .result__gallery .result_container .gif_result {
   width: 190px;
   height: 160px;
@@ -553,26 +651,48 @@
   }
 }
 
-#content {
+#fav_content {
   padding-top: 170px;
 }
 
-#content .content_title {
+#fav_content .fav_gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#fav_content .fav_gallery .result_container_fav {
+  position: relative;
+  margin: 20px;
+}
+
+#fav_content .fav_gallery .result_container_fav .gif_result {
+  width: 260px;
+  height: 200px;
+}
+
+#fav_content .content_title {
   text-align: center;
 }
 
-#content .content_title .content_text {
+#fav_content .content_title .content_text {
   color: #572ee5;
   font-size: 25px;
 }
 
 @media (min-width: 700px) {
-  #content .content_title .content_text {
+  #fav_content .content_title .content_text {
     font-size: 35px;
   }
 }
 
-#content .content_title .btn_back {
+#fav_content .content_title .btn_back {
   color: #572ee5;
   padding: 8px 16px;
   border: 1px solid #572ee5;
@@ -585,98 +705,9 @@
   transition: 0.5s;
 }
 
-#content .content_title .btn_back:hover {
+#fav_content .content_title .btn_back:hover {
   color: white;
   background-color: #572ee5;
-}
-
-.result_container {
-  margin: 20px;
-  position: relative;
-}
-
-.result_container .gif_hover {
-  display: block;
-  position: absolute;
-  top: 0;
-  background-color: rgba(87, 46, 229, 0.7);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.result_container .gif_hover:hover {
-  opacity: 100;
-}
-
-.result_container .gif_hover .gif_icons {
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.result_container .gif_hover .gif_icons .icon {
-  margin: 0 5px;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
-
-.result_container .gif_hover .gif_icons .iconFav {
-  background-image: url("/assets/icon-fav.svg");
-}
-
-.result_container .gif_hover .gif_icons .iconFav:hover {
-  background-image: url("/assets/icon-fav-hover.svg");
-}
-
-.result_container .gif_hover .gif_icons .iconFav:active {
-  background-image: url("/assets/icon-fav-active.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.result_container .gif_hover .gif_icons .iconDownload {
-  background-image: url("/assets/icon-download.svg");
-}
-
-.result_container .gif_hover .gif_icons .iconDownload:hover {
-  background-image: url("/assets/icon-download-hover.svg");
-}
-
-.result_container .gif_hover .gif_icons .iconBig {
-  background-image: url("/assets/icon-max-normal.svg");
-}
-
-.result_container .gif_hover .gif_icons .iconBig:hover {
-  background-image: url("/assets/icon-max-hover.svg");
-}
-
-.result_container .gif_hover .gif_icons img {
-  cursor: pointer;
-}
-
-.result_container .gif_hover .gif_details {
-  padding: 15px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.result_container .gif_hover .gif_details .gif_user {
-  color: white;
-  font-size: 15px;
-}
-
-.result_container .gif_hover .gif_details .gif_title {
-  color: white;
-  font-size: 16px;
 }
 
 #max {

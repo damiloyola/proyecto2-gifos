@@ -17,6 +17,9 @@
             width: 100%;
             justify-content: center;
             .result_container {
+                margin: 20px;
+                position: relative;
+                @extend %hover;
                 .gif_result {
                     width: 190px;
                     height: 160px;

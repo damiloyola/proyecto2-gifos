@@ -1,5 +1,21 @@
-#content {
+#fav_content {
     padding-top: 170px;
+    .fav_gallery {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        .result_container_fav {
+            position: relative;
+            margin: 20px;
+            @extend %hover;
+            .gif_result {
+                width: 260px;
+                height: 200px;
+            }
+        }
+    }
+
     .content_title {
         text-align: center;
         .content_text {
