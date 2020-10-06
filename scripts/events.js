@@ -1,25 +1,24 @@
-$favContainer = document.getElementById("fav_content");
-$misGifContainer = document.getElementById("misGif_content");
-$createContainer = document.getElementById("create_content");
-
 // ** NAVIGATION ** //
 const goToFav = () => {
     $sectionHero.classList.add("hide");
     $misGifContainer.classList.add("hide");
     $createContainer.classList.add("hide");
     $favContainer.classList.remove("hide");
+    $mainContainer.classList.add("hide");
 };
 
 const goToMisGif = () => {
     $sectionHero.classList.add("hide");
     $favContainer.classList.add("hide");
     $createContainer.classList.add("hide");
+    $mainContainer.classList.add("hide");
     $misGifContainer.classList.remove("hide");
 };
 const goToCreate = () => {
     $sectionHero.classList.add("hide");
     $favContainer.classList.add("hide");
     $misGifContainer.classList.add("hide");
+    $mainContainer.classList.add("hide");
     $createContainer.classList.remove("hide");
 };
 
@@ -31,13 +30,25 @@ const showMax = (url, user, title) => {
     $titleMax.innerHTML = title;
     $sectionMax.classList.remove("hide");
     $sectionHero.classList.add("hide");
+    $mainContainer.classList.add("hide");
+    $trendContainer.classList.add("hide");
+    $favContainer.classList.add("hide");
+    $misGifContainer.classList.add("hide");
+    $mainContainer.classList.add("hide");
+    $createContainer.classList.add("hide");
     $imgMax.src = url;
     window.scrollTo({ top: 0, behavior: "auto" });
 };
 
 const closeMax = () => {
     $sectionMax.classList.add("hide");
+    $trendContainer.classList.remove("hide");
     $sectionHero.classList.remove("hide");
+    $mainContainer.classList.remove("hide");
+    $favContainer.classList.add("hide");
+    $misGifContainer.classList.add("hide");
+    $createContainer.classList.add("hide");
+
     window.scrollTo({ top: 650, behavior: "smooth" });
 };
 

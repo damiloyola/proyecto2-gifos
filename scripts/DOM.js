@@ -16,3 +16,10 @@ const $imgMax = document.querySelector(".img_max");
 const $sectionMax = document.getElementById("max");
 const $sectionHero = document.getElementById("hero");
 const $closeMax = document.querySelector(".max__close");
+
+//SECTION CONTAINERS
+const $mainContainer = document.getElementById("content");
+const $favContainer = document.getElementById("fav_content");
+const $misGifContainer = document.getElementById("misGif_content");
+const $createContainer = document.getElementById("create_content");
+const $trendContainer = document.getElementById("trend");
