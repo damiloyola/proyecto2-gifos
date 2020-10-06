@@ -78,7 +78,7 @@ const displayTrendGifs = async (limit, offset) => {
         div.innerHTML = `<img class="gif_result" src="${i.images.original.url}" alt="${i.title}"></img>
                        <div class="gif_hover hide">
                           <div class="gif_icons">
-                              <div class="icon iconFav"></div>
+                          <div class="icon iconFav" onclick="addFav('${i.images.original.url}','${i.username}','${i.title}')"></div>
                               <div class="icon iconDownload"></div>
                               <div class="icon iconBig"  onclick="showMax('${i.images.original.url}','${i.username}','${i.title}')"></div>
                                          

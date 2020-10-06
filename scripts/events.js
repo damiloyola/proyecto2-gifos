@@ -1,7 +1,27 @@
-const $imgMax = document.querySelector(".img_max");
-const $sectionMax = document.getElementById("max");
-const $sectionHero = document.getElementById("hero");
-const $closeMax = document.querySelector(".max__close");
+$favContainer = document.getElementById("fav_content");
+$misGifContainer = document.getElementById("misGif_content");
+$createContainer = document.getElementById("create_content");
+
+// ** NAVIGATION ** //
+const goToFav = () => {
+    $sectionHero.classList.add("hide");
+    $misGifContainer.classList.add("hide");
+    $createContainer.classList.add("hide");
+    $favContainer.classList.remove("hide");
+};
+
+const goToMisGif = () => {
+    $sectionHero.classList.add("hide");
+    $favContainer.classList.add("hide");
+    $createContainer.classList.add("hide");
+    $misGifContainer.classList.remove("hide");
+};
+const goToCreate = () => {
+    $sectionHero.classList.add("hide");
+    $favContainer.classList.add("hide");
+    $misGifContainer.classList.add("hide");
+    $createContainer.classList.remove("hide");
+};
 
 // ** MAX GIF **//
 const showMax = (url, user, title) => {
@@ -24,8 +44,12 @@ const closeMax = () => {
 $closeMax.addEventListener("click", closeMax);
 
 // ** FAV **//
-
-let arrFav = [];
+let arrFav;
+if (localStorage.getItem("FavGifs") === null) {
+    arrFav = [];
+} else {
+    arrFav = JSON.parse(localStorage.getItem("FavGifs"));
+}
 
 const addFav = (url, user, title) => {
     let gifFav = {

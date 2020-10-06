@@ -46,11 +46,11 @@
             </li>
             <li><a href="Modo oscuro">Modo oscuro</a></li>
             <hr />
-            <li><a href="fav.html">Favoritos</a></li>
+            <li><a href="#" onclick="goToFav()">Favoritos</a></li>
             <hr />
-            <li><a href="misGif.html">Mis GifOs</a></li>
+            <li><a href="#" onclick="goToMisGif()">Mis GifOs</a></li>
             <hr />
-            <li><a href="create.html" class="btn__menu"></a></li>
+            <li><a href="#" onclick="goToCreate()" class="btn__menu"></a></li>
           </ul>
         </div>
       </header>
@@ -110,8 +110,31 @@
       
     </section>
 
+    <!-- CREATE GIF -->
+    <section id="create_content" class="hide">
+      <div class="content_title">
+      
+
+      </div>
+    </section>
+
+
+
+    <!-- MIS GIFOS -->
+    <section id="misGif_content" class="hide">
+      <div class="content_title">
+        <img src="/assets/icon-mis-gifos.svg" alt="" class="content_icon">
+        <h3 class="content_text">Mis GifOs</h3>
+       <a href="index.html" class="btn_back">Volver</a>
+      </div>
+      <div class="misGif_gallery">
+
+      </div>
+    </section>
+
+
     <!-- FAV -->
-    <section id="fav_content">
+    <section id="fav_content" class="hide">
       <div class="content_title">
         <img src="/assets/icon-favoritos.svg" alt="" class="content_icon">
         <h3 class="content_text">Favoritos</h3>
@@ -161,5 +184,6 @@
     <script src="/scripts/main.js"></script>
     <script src="/scripts/search.js"></script>
     <script src="/scripts/events.js"></script>
+
   </body>
 </html>

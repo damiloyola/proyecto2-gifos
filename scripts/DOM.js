@@ -10,3 +10,9 @@ const $verMasBtn = document.querySelector(".vermas");
 
 const $burgerBtn = document.querySelector(".menu__burguer");
 const $burgerMenuUl = document.querySelector(".menu__ul");
+
+//MAX ELEMENTS
+const $imgMax = document.querySelector(".img_max");
+const $sectionMax = document.getElementById("max");
+const $sectionHero = document.getElementById("hero");
+const $closeMax = document.querySelector(".max__close");
