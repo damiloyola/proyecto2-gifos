@@ -96,7 +96,7 @@ const populateFavGif = () => {
             <div class="gif_hover hide">
                <div class="gif_icons">
                    <div class="icon iconTrash" onclick="deleteFav('${gifsLocalstorage[i].url}')"></div>
-                   <div class="icon iconDownload"></div>
+                   <div class="icon iconDownload" onclick="downloadGif('${gifsLocalstorage[i].url}','${gifsLocalstorage[i].title}')"></div>
                    <div class="icon iconBig" onclick="showMax('${gifsLocalstorage[i].url}','${gifsLocalstorage[i].user}','${gifsLocalstorage[i].title}')"></div>
                               
                </div>
@@ -122,3 +122,10 @@ const deleteFav = (url) => {
     }
 };
 populateFavGif();
+
+// ** DOWNLOAD ** //
+
+async function downloadGif(url, title) {
+    let blob = await fetch(url).then((img) => img.blob());
+    invokeSaveAsDialog(blob, title + ".gif");
+}

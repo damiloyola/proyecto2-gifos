@@ -81,7 +81,7 @@ const populateGallery = (arr) => {
                              <div class="gif_hover hide">
                                 <div class="gif_icons">
                                     <div class="icon iconFav" onclick="addFav('${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')"></div>
-                                    <div class="icon iconDownload"></div>
+                                    <div class="icon iconDownload" onclick="downloadGif('${arr[i].images.original.url}','${arr[i].title}')" ></div>
                                     <div class="icon iconBig" onclick="showMax('${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')"></div>
                                                
                                 </div>
