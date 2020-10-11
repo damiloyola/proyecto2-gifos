@@ -5,19 +5,46 @@
   font-weight: 500;
 }
 
-.header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .result__gallery .search_error-container .search_error-text, #content .search__result .vermas, #fav_content .content_title .content_text, #fav_content .content_title .btn_back, #misGif_content .content_title .content_text, #misGif_content .content_title .btn_back {
+#content .search__result .vermas, #fav_content .content_title .btn_back, #create_content .createMain_container .create_center .button_record,
+#create_content .createMain_container .create_center .button_start,
+#create_content .createMain_container .create_center .button_stop,
+#create_content .createMain_container .create_center .button_upload, .header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .result__gallery .search_error-container .search_error-text, #fav_content .content_title .content_text, #misGif_content .content_title .content_text, #misGif_content .content_title .btn_back, #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text, #create_content .createMain_container .create_center .center_screen .screen_main .screen_title {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user, #hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer, #max .max_foot .max_text .max_user {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user, #hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer, #max .max_foot .max_text .max_user, #create_content .createMain_container .create_center .center_screen .screen_main .screen_paragraph {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title, #create_content .createMain_container .create_center .center_buttons .stepButton {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+}
+
+#content .search__result .vermas, #fav_content .content_title .btn_back, #create_content .createMain_container .create_center .button_record,
+#create_content .createMain_container .create_center .button_start,
+#create_content .createMain_container .create_center .button_stop,
+#create_content .createMain_container .create_center .button_upload {
+  color: #572ee5;
+  padding: 8px 16px;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  display: block;
+  width: 130px;
+  text-align: center;
+  margin: 50px auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#content .search__result .vermas:hover, #fav_content .content_title .btn_back:hover, #create_content .createMain_container .create_center .button_record:hover,
+#create_content .createMain_container .create_center .button_start:hover,
+#create_content .createMain_container .create_center .button_stop:hover,
+#create_content .createMain_container .create_center .button_upload:hover {
+  color: white;
+  background-color: #572ee5;
 }
 
 #trend .trend__imgs .result_container .gif_hover, #content .search__result .result__gallery .result_container .gif_hover, #fav_content .fav_gallery .result_container_fav .gif_hover {
@@ -613,24 +640,6 @@
   color: #50e3c2;
 }
 
-#content .search__result .vermas {
-  color: #572ee5;
-  padding: 8px 16px;
-  border: 1px solid #572ee5;
-  border-radius: 25px;
-  display: block;
-  width: 127px;
-  text-align: center;
-  margin: 50px auto;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#content .search__result .vermas:hover {
-  color: white;
-  background-color: #572ee5;
-}
-
 @media (min-width: 700px) {
   #content .search__result .result__title {
     font-size: 35px;
@@ -690,24 +699,6 @@
   #fav_content .content_title .content_text {
     font-size: 35px;
   }
-}
-
-#fav_content .content_title .btn_back {
-  color: #572ee5;
-  padding: 8px 16px;
-  border: 1px solid #572ee5;
-  border-radius: 25px;
-  display: block;
-  width: 127px;
-  text-align: center;
-  margin: 50px auto;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#fav_content .content_title .btn_back:hover {
-  color: white;
-  background-color: #572ee5;
 }
 
 #max {
@@ -774,6 +765,180 @@
 #misGif_content .content_title .btn_back:hover {
   color: white;
   background-color: #572ee5;
+}
+
+#create_content {
+  padding-top: 130px;
+}
+
+#create_content .createMain_container {
+  padding: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#create_content .createMain_container .create_leftCamera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+#create_content .createMain_container .create_center {
+  width: 60%;
+  text-align: center;
+}
+
+#create_content .createMain_container .create_center .center_screen {
+  border: 1px solid #572ee5;
+  height: 390px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_topCorners {
+  padding: 25px;
+  padding-bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_topCorners .screen_topRight {
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #50e3c2;
+  border-right: 1px solid #50e3c2;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_topCorners .screen_topLeft {
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #50e3c2;
+  border-left: 1px solid #50e3c2;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_botCorners {
+  padding: 25px;
+  padding-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_botCorners .screen_botRight {
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid #50e3c2;
+  border-right: 1px solid #50e3c2;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_botCorners .screen_botLeft {
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid #50e3c2;
+  border-left: 1px solid #50e3c2;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main #main_video,
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay,
+#create_content .createMain_container .create_center .center_screen .screen_main .main_gif {
+  top: 35px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  position: absolute;
+  width: 480px;
+  height: 320px;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay {
+  background-color: rgba(87, 46, 229, 0.7);
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text {
+  color: white;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .screen_title {
+  color: #572ee5;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .screen_title .screen_span {
+  color: #50e3c2;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .screen_paragraph {
+  font-size: 16px;
+  line-height: 29px;
+}
+
+#create_content .createMain_container .create_center .center_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#create_content .createMain_container .create_center .center_buttons .stepButton {
+  color: #572ee5;
+  font-size: 18px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #572ee5;
+  border-radius: 50%;
+  line-height: 160%;
+  margin: 10px;
+}
+
+#create_content .createMain_container .create_center .center_buttons .active {
+  color: white;
+  background-color: #572ee5;
+}
+
+#create_content .createMain_container .create_center .center_line {
+  border-top: 7px solid #572ee5;
+}
+
+#create_content .createMain_container .create_center .button_record,
+#create_content .createMain_container .create_center .button_stop,
+#create_content .createMain_container .create_center .button_upload {
+  display: none;
+}
+
+#create_content .createMain_container .create_rightCamera {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 * {

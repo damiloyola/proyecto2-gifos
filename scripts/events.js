@@ -5,6 +5,9 @@ const goToFav = () => {
     $createContainer.classList.add("hide");
     $favContainer.classList.remove("hide");
     $mainContainer.classList.add("hide");
+    $burgerMenuUl.classList.add("hide");
+    $sectionMax.classList.add("hide");
+    $burgerBtn.src = "assets/burger.svg";
 };
 
 const goToMisGif = () => {
@@ -13,16 +16,25 @@ const goToMisGif = () => {
     $createContainer.classList.add("hide");
     $mainContainer.classList.add("hide");
     $misGifContainer.classList.remove("hide");
+    $burgerMenuUl.classList.add("hide");
+    $sectionMax.classList.add("hide");
+    $burgerBtn.src = "assets/burger.svg";
 };
 const goToCreate = () => {
+    $trendContainer.classList.add("hide");
     $sectionHero.classList.add("hide");
     $favContainer.classList.add("hide");
     $misGifContainer.classList.add("hide");
     $mainContainer.classList.add("hide");
     $createContainer.classList.remove("hide");
+    $burgerMenuUl.classList.add("hide");
+    $sectionMax.classList.add("hide");
+    $burgerBtn.src = "assets/burger.svg";
 };
 
 // ** MAX GIF **//
+const $favMaxBtn = document.getElementById("addFav_max");
+
 const showMax = (url, user, title) => {
     const $userMax = document.querySelector(".max_user");
     $userMax.innerHTML = user;
@@ -38,6 +50,19 @@ const showMax = (url, user, title) => {
     $createContainer.classList.add("hide");
     $imgMax.src = url;
     window.scrollTo({ top: 0, behavior: "auto" });
+    if (arrFav.find((element) => element.url === url) == undefined) {
+        $favMaxBtn.src = "/assets/icon-fav.svg";
+        $favMaxBtn.addEventListener("click", () => {
+            addFav(url, user, title);
+            showMax(url, user, title);
+        });
+    } else {
+        $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+        $favMaxBtn.addEventListener("click", () => {
+            deleteFav(url);
+            showMax(url, user, title);
+        });
+    }
 };
 
 const closeMax = () => {
@@ -71,7 +96,7 @@ const addFav = (url, user, title) => {
 
     arrFav.push(gifFav);
 
-    console.log(gifFav);
+    console.log(arrFav);
 
     localStorage.setItem("FavGifs", JSON.stringify(arrFav));
     populateFavGif();
@@ -112,14 +137,13 @@ const populateFavGif = () => {
 };
 
 const deleteFav = (url) => {
-    const favArr = JSON.parse(localStorage.getItem("FavGifs"));
     for (let i = 0; i < arrFav.length; i++) {
         if (arrFav[i].url === url) {
             arrFav.splice(i, 1);
-            localStorage.setItem("FavGifs", JSON.stringify(arrFav));
-            populateFavGif();
         }
     }
+    localStorage.setItem("FavGifs", JSON.stringify(arrFav));
+    populateFavGif();
 };
 populateFavGif();
 

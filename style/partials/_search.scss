@@ -39,20 +39,7 @@
             }
         }
         .vermas {
-            @extend %montserrat-bold;
-            color: $violet;
-            padding: 8px 16px;
-            border: 1px solid $violet;
-            border-radius: 25px;
-            display: block;
-            width: 127px;
-            text-align: center;
-            margin: 50px auto;
-            transition: 0.5s;
-            &:hover {
-                color: white;
-                background-color: $violet;
-            }
+            @extend %btn;
         }
     }
 }

@@ -103,7 +103,7 @@
           <h4 class="max_title">Titulo</h4>
         </div>
         <div class="max__btns">
-          <img src="/assets/icon-fav.svg" alt="">
+          <img src="/assets/icon-fav.svg" alt="" id="addFav_max">
           <img src="/assets/icon-download.svg" alt="">
         </div>
       </div>
@@ -111,11 +111,62 @@
     </section>
 
     <!-- CREATE GIF -->
+
     <section id="create_content" class="hide">
-      <div class="content_title">
+      <div class="createMain_container">
+        <!-- dibujo camara -->
+        <div class="create_leftCamera">
+          <img src="/assets/camara.svg" alt="camara">
+          <img src="/assets/element-luz-camara.svg" alt="luz camara">
+        </div>
+
+        <!-- parte central -->
+        <div class="create_center">
+          <!-- pantalla -->
+          <div class="center_screen">
+            <div class="screen_topCorners">
+              <div class="screen_topLeft"></div>
+              <div class="screen_topRight"></div>
+              
+            </div>
+            <div class="screen_main">
+              <video id="main_video" class="hide" ></video>
+              <img src="" alt="" class="main_gif hide">
+              <div class="main_overlay hide">
+                <img src="/assets/loader.svg" alt="" class="overlay_img">
+                <p class="overlay_text"> Estamos subiendo tu GIFO</p>
+              </div>
+              <h2 class="screen_title">Aquí podrás crear tus propios <span class="screen_span">GIFOS</span></h2>
+              <p class="screen_paragraph"> ¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video)</p>
+            
+            </div>
+            <div class="screen_botCorners">
+              <div class="screen_botLeft"></div>
+              <div class="screen_botRight"></div>
+              
+            </div>
+          </div>
+
+          <!-- botones -->
+          <div class="center_buttons">
+            <div class="stepButton step1">1</div>  
+            <div class="stepButton step2">2</div>  
+            <div class="stepButton step3">3</div>  
+          </div>
+          <hr class="center_line">
+          <a href="#" class="button_start">COMENZAR</a>
+          <a href="#" class="button_record">GRABAR</a>
+          <a href="#" class="button_stop">DETENER</a>
+          <a href="#" class="button_upload">SUBIR</a>
+  
+        </div>
+        <!-- camara derecha -->
+      <div class="create_rightCamera">
+        <img src="/assets/pelicula.svg" alt="">
+      </div>
+      </div>
       
 
-      </div>
     </section>
 
 
@@ -186,6 +237,7 @@
     <script src="/scripts/trending.js"></script>
     <script src="/scripts/search.js"></script>
     <script src="/scripts/events.js"></script>
+    <script src="/scripts/create.js"></script>
 
 
   </body>

@@ -1,0 +1,144 @@
+#create_content {
+    padding-top: 130px;
+    .createMain_container {
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-around;
+
+        //*** left camera ***//
+        .create_leftCamera {
+            display: flex;
+            align-items: center;
+            margin-top: 100px;
+            align-self: baseline;
+        }
+
+        .create_center {
+            width: 60%;
+            text-align: center;
+            .center_screen {
+                border: 1px solid $violet;
+                height: 390px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: relative;
+                overflow: hidden;
+
+                // ** bordes de esquinas **//
+                .screen_topCorners {
+                    padding: 25px;
+                    padding-bottom: 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    .screen_topRight {
+                        width: 25px;
+                        height: 25px;
+                        border-top: 1px solid $aqua;
+                        border-right: 1px solid $aqua;
+                    }
+                    .screen_topLeft {
+                        width: 25px;
+                        height: 25px;
+                        border-top: 1px solid $aqua;
+                        border-left: 1px solid $aqua;
+                    }
+                }
+                .screen_botCorners {
+                    padding: 25px;
+                    padding-top: 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    .screen_botRight {
+                        width: 25px;
+                        height: 25px;
+                        border-bottom: 1px solid $aqua;
+                        border-right: 1px solid $aqua;
+                    }
+                    .screen_botLeft {
+                        width: 25px;
+                        height: 25px;
+                        border-bottom: 1px solid $aqua;
+                        border-left: 1px solid $aqua;
+                    }
+                }
+
+                // ******** SCREEN MAIN **********//
+
+                .screen_main {
+                    #main_video,
+                    .main_overlay,
+                    .main_gif {
+                        top: 35px;
+                        right: 50%;
+                        transform: translateX(50%);
+                        position: absolute;
+                        width: 480px;
+                        height: 320px;
+                    }
+                    .main_overlay {
+                        background-color: transparentize(#572ee5, 0.3);
+                        .overlay_text {
+                            @extend %montserrat-bold;
+                            color: white;
+                        }
+                    }
+                    .screen_title {
+                        color: $violet;
+                        font-size: 25px;
+                        padding-bottom: 20px;
+                        @extend %montserrat-bold;
+                        .screen_span {
+                            color: $aqua;
+                        }
+                    }
+                    .screen_paragraph {
+                        font-size: 16px;
+                        line-height: 29px;
+                        @extend %roboto-regular;
+                    }
+                }
+            }
+
+            .center_buttons {
+                display: flex;
+                justify-content: center;
+                .stepButton {
+                    @extend %roboto-black;
+                    color: $violet;
+                    font-size: 18px;
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    border: 1px solid $violet;
+                    border-radius: 50%;
+                    line-height: 160%;
+                    margin: 10px;
+                }
+                .active {
+                    color: white;
+                    background-color: $violet;
+                }
+            }
+            .center_line {
+                border-top: 7px solid $violet;
+            }
+
+            .button_record,
+            .button_start,
+            .button_stop,
+            .button_upload {
+                @extend %btn;
+            }
+            .button_record,
+            .button_stop,
+            .button_upload {
+                display: none;
+            }
+        }
+        // *** right camera ***//
+        .create_rightCamera {
+            align-self: center;
+        }
+    }
+}
