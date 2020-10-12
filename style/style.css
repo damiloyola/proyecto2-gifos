@@ -212,7 +212,7 @@
     width: 3.5rem;
   }
   .header__container #header .header__menu {
-    width: 80%;
+    width: 90%;
     min-width: 500px;
   }
   .header__container #header .header__menu .menu__burguer {
@@ -227,8 +227,9 @@
     display: -ms-flexbox;
     display: flex;
     list-style: none;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: white;
@@ -241,12 +242,12 @@
     padding: 0;
     height: 50px;
     line-height: 50px;
-    margin-right: 20px;
+    margin-right: 50px;
   }
   .header__container #header .header__menu .menu__ul li a {
     color: #572ee5;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 13px;
     border-bottom: 2px solid white;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -437,7 +438,7 @@
   outline: none;
   text-decoration: none;
   color: #572ee5;
-  font-size: 14px;
+  font-size: 16px;
   border: 2px solid white;
   background-color: white;
 }
@@ -471,13 +472,14 @@
 
 #trend .trend__title h2 {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
   color: #572ee5;
 }
 
 #trend .trend__imgs {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,15 +492,13 @@
 }
 
 #trend .trend__imgs .result_container {
-  min-width: 250px;
-  min-height: 190px;
   margin: 20px;
   position: relative;
 }
 
 #trend .trend__imgs .result_container .gif_result {
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 190px;
 }
 
 @media (min-width: 970px) {
@@ -537,12 +537,11 @@
     background-image: url(/assets/button-slider-right-hover.svg);
   }
   #trend .trend_container .trend__imgs {
-    overflow-x: auto;
+    overflow-x: hidden;
   }
-  #trend .trend_container .trend__imgs .result_container {
-    width: 360px;
+  #trend .trend_container .trend__imgs .result_container .gif_result {
+    width: 400px;
     height: 275px;
-    margin: 20px;
   }
 }
 

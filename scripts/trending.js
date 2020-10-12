@@ -24,13 +24,10 @@ const displayTrendTags = async () => {
 };
 
 displayTrendTags();
-
-const displayTrendGifs = async (limit, offset) => {
-    const $trendGifs = document.querySelector(".trend__imgs");
+const $trendGifs = document.querySelector(".trend__imgs");
+const displayTrendGifs = async (limit) => {
     $trendGifs.innerHTML = "";
-    const arr = await trending(
-        trendingGifURL + "&limit=" + limit + "&offset=" + offset
-    );
+    const arr = await trending(trendingGifURL + "&limit=" + limit);
     console.log(arr.data[0].images.original.url);
     arr.data.forEach((i) => {
         const div = document.createElement("div");
@@ -61,16 +58,12 @@ const displayTrendGifs = async (limit, offset) => {
     });
 };
 
-displayTrendGifs(3, 0);
+displayTrendGifs(12);
 offsetTrend = 0;
 const rightArrowTrend = () => {
-    offsetTrend += 1;
-    displayTrendGifs(3, offsetTrend);
+    $trendGifs.scrollLeft += 400;
 };
 
 const leftArrowTrend = () => {
-    if (offsetTrend > 0) {
-        offsetTrend -= 1;
-        displayTrendGifs(3, offsetTrend);
-    }
+    $trendGifs.scrollLeft -= 400;
 };

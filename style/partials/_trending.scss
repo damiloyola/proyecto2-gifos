@@ -8,7 +8,7 @@
         margin-bottom: 20px;
         h2 {
             margin-bottom: 10px;
-            font-size: 20px;
+            font-size: 25px;
             @extend %montserrat-bold;
             color: $violet;
         }
@@ -17,7 +17,7 @@
         }
     }
     .trend__imgs {
-        justify-content: space-around;
+        justify-content: flex-start;
         display: flex;
         overflow-x: scroll;
         .left_arrow,
@@ -25,13 +25,11 @@
             display: none;
         }
         .result_container {
-            min-width: 250px;
-            min-height: 190px;
             margin: 20px;
             position: relative;
             .gif_result {
-                width: 100%;
-                height: 100%;
+                width: 250px;
+                height: 190px;
             }
             @extend %hover;
         }
@@ -68,12 +66,13 @@
                 }
             }
             .trend__imgs {
-                overflow-x: auto;
+                overflow-x: hidden;
 
                 .result_container {
-                    width: 360px;
-                    height: 275px;
-                    margin: 20px;
+                    .gif_result {
+                        width: 400px;
+                        height: 275px;
+                    }
                 }
             }
         }
