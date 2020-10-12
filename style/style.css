@@ -8,7 +8,7 @@
 #content .search__result .vermas, #fav_content .content_title .btn_back, #create_content .createMain_container .create_center .button_record,
 #create_content .createMain_container .create_center .button_start,
 #create_content .createMain_container .create_center .button_stop,
-#create_content .createMain_container .create_center .button_upload, .header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .result__gallery .search_error-container .search_error-text, #fav_content .content_title .content_text, #misGif_content .content_title .content_text, #misGif_content .content_title .btn_back, #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text, #create_content .createMain_container .create_center .center_screen .screen_main .screen_title {
+#create_content .createMain_container .create_center .button_upload, .header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .result__gallery .search_error-container .search_error-text, #fav_content .content_title .content_text, #misGif_content .content_title .content_text, #misGif_content .content_title .btn_back, #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text, #create_content .createMain_container .create_center .center_screen .screen_main .screen_title, #create_content .createMain_container .create_center .center_buttons_container .restartButton {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -18,7 +18,7 @@
   font-weight: 400;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title, #create_content .createMain_container .create_center .center_buttons .stepButton {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title, #create_content .createMain_container .create_center .center_buttons_container .center_buttons .stepButton {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
@@ -880,8 +880,45 @@
   background-color: rgba(87, 46, 229, 0.7);
 }
 
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_img {
+  margin-top: 100px;
+}
+
 #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text {
   color: white;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns {
+  margin-left: 75%;
+  margin-top: 25px;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_download,
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_link {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 6px;
+  margin: 0 5px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_download {
+  background-image: url("/assets/icon-download.svg");
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_download:hover {
+  background-image: url("/assets/icon-download-hover.svg");
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_link {
+  background-image: url("/assets/icon-link-normal.svg");
+}
+
+#create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_link:hover {
+  background-image: url("/assets/icon-link-hover.svg");
 }
 
 #create_content .createMain_container .create_center .center_screen .screen_main .screen_title {
@@ -899,7 +936,30 @@
   line-height: 29px;
 }
 
-#create_content .createMain_container .create_center .center_buttons {
+#create_content .createMain_container .create_center .center_buttons_container {
+  text-align: center;
+}
+
+#create_content .createMain_container .create_center .center_buttons_container .empty_placeholder {
+  width: 128px;
+}
+
+#create_content .createMain_container .create_center .center_buttons_container .restartButton {
+  color: #572ee5;
+  float: right;
+  margin-top: -35px;
+  font-size: 13px;
+  border-bottom: 2px solid white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#create_content .createMain_container .create_center .center_buttons_container .restartButton:hover {
+  border-bottom: 2px solid #50e3c2;
+}
+
+#create_content .createMain_container .create_center .center_buttons_container .center_buttons {
+  justify-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -908,7 +968,7 @@
           justify-content: center;
 }
 
-#create_content .createMain_container .create_center .center_buttons .stepButton {
+#create_content .createMain_container .create_center .center_buttons_container .center_buttons .stepButton {
   color: #572ee5;
   font-size: 18px;
   display: block;
@@ -920,7 +980,7 @@
   margin: 10px;
 }
 
-#create_content .createMain_container .create_center .center_buttons .active {
+#create_content .createMain_container .create_center .center_buttons_container .center_buttons .active {
   color: white;
   background-color: #572ee5;
 }

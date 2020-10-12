@@ -133,6 +133,11 @@
               <video id="main_video" class="hide" ></video>
               <img src="" alt="" class="main_gif hide">
               <div class="main_overlay hide">
+                <div class="overlay_btns hide">
+                    <button class="btn_over_download"></button>
+                    <button class="btn_over_link" onclick="goToMisGif()"></button>
+
+                </div>
                 <img src="/assets/loader.svg" alt="" class="overlay_img">
                 <p class="overlay_text"> Estamos subiendo tu GIFO</p>
               </div>
@@ -148,11 +153,18 @@
           </div>
 
           <!-- botones -->
-          <div class="center_buttons">
-            <div class="stepButton step1">1</div>  
-            <div class="stepButton step2">2</div>  
-            <div class="stepButton step3">3</div>  
+          <div class="center_buttons_container">
+            <div class="empty_placeholder"></div>
+            <div class="center_buttons">
+              <div class="stepButton step1">1</div>  
+              <div class="stepButton step2">2</div>  
+              <div class="stepButton step3">3</div>  
+              
+            </div>
+            <a href="#" class="restartButton hide">NUEVA CAPTURA</a>
           </div>
+          
+          
           <hr class="center_line">
           <a href="#" class="button_start">COMENZAR</a>
           <a href="#" class="button_record">GRABAR</a>

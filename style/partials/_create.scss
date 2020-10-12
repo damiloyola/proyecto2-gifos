@@ -78,11 +78,41 @@
                     }
                     .main_overlay {
                         background-color: transparentize(#572ee5, 0.3);
+                        .overlay_img {
+                            margin-top: 100px;
+                        }
                         .overlay_text {
                             @extend %montserrat-bold;
                             color: white;
                         }
+                        .overlay_btns {
+                            margin-left: 75%;
+                            margin-top: 25px;
+                            .btn_over_download,
+                            .btn_over_link {
+                                border: none;
+                                box-shadow: none;
+                                border-radius: 6px;
+                                margin: 0 5px;
+                                width: 32px;
+                                height: 32px;
+                                cursor: pointer;
+                            }
+                            .btn_over_download {
+                                background-image: url("/assets/icon-download.svg");
+                                &:hover {
+                                    background-image: url("/assets/icon-download-hover.svg");
+                                }
+                            }
+                            .btn_over_link {
+                                background-image: url("/assets/icon-link-normal.svg");
+                                &:hover {
+                                    background-image: url("/assets/icon-link-hover.svg");
+                                }
+                            }
+                        }
                     }
+
                     .screen_title {
                         color: $violet;
                         font-size: 25px;
@@ -100,26 +130,47 @@
                 }
             }
 
-            .center_buttons {
-                display: flex;
-                justify-content: center;
-                .stepButton {
-                    @extend %roboto-black;
-                    color: $violet;
-                    font-size: 18px;
-                    display: block;
-                    width: 32px;
-                    height: 32px;
-                    border: 1px solid $violet;
-                    border-radius: 50%;
-                    line-height: 160%;
-                    margin: 10px;
+            .center_buttons_container {
+                text-align: center;
+                .empty_placeholder {
+                    width: 128px;
                 }
-                .active {
-                    color: white;
-                    background-color: $violet;
+                .restartButton {
+                    @extend %montserrat-bold;
+                    color: $violet;
+                    float: right;
+                    margin-top: -35px;
+                    font-size: 13px;
+                    border-bottom: 2px solid white;
+                    transition: 0.5s;
+                    &:hover {
+                        border-bottom: 2px solid $aqua;
+                    }
+                }
+                .center_buttons {
+                    justify-self: center;
+                    display: flex;
+                    justify-content: center;
+
+                    .stepButton {
+                        @extend %roboto-black;
+                        color: $violet;
+                        font-size: 18px;
+                        display: block;
+                        width: 32px;
+                        height: 32px;
+                        border: 1px solid $violet;
+                        border-radius: 50%;
+                        line-height: 160%;
+                        margin: 10px;
+                    }
+                    .active {
+                        color: white;
+                        background-color: $violet;
+                    }
                 }
             }
+
             .center_line {
                 border-top: 7px solid $violet;
             }
