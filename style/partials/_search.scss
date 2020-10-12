@@ -25,18 +25,7 @@
                     height: 160px;
                 }
             }
-            .search_error-container {
-                text-align: center;
-                padding: 50px 0;
-                .search_error-img {
-                    padding: 20px 0;
-                }
-                .search_error-text {
-                    @extend %montserrat-bold;
-                    font-size: 22px;
-                    color: $aqua;
-                }
-            }
+            @extend %error;
         }
         .vermas {
             @extend %btn;

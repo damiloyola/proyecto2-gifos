@@ -105,8 +105,8 @@ const uploadRecord = async () => {
             $imgOverlay.src = "/assets/check.svg";
             $textOverlay.innerHTML = "Subido con exito!";
             $btnsOverlay.classList.remove("hide");
-
             console.log(gif);
+            fetchIdMiGif(gif.data.id);
         })
         .catch((err) => console.log(err));
 };

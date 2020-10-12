@@ -69,9 +69,9 @@ const populateGallery = (arr) => {
     }
     if (arr.length === 0) {
         $resultGallery.innerHTML = `
-        <div class ="search_error-container">
-        <img class="search_error-img"  src="assets/icon-busqueda-sin-resultado.svg" alt="Sin resultados de busqueda" >
-        <h4 class="search_error-text">Intenta con otra búsqueda.</h4>
+        <div class ="error-container">
+        <img class="error-img"  src="assets/icon-busqueda-sin-resultado.svg" alt="Sin resultados de busqueda" >
+        <h4 class="error-text">Intenta con otra búsqueda.</h4>
         </div> `;
     } else {
         for (let i = 0; i < arr.length; i++) {

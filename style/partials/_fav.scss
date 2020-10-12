@@ -1,6 +1,7 @@
 #fav_content {
     padding-top: 170px;
     .fav_gallery {
+        @extend %error;
         display: flex;
         flex-wrap: wrap;
         width: 100%;

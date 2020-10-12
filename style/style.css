@@ -8,17 +8,17 @@
 #content .search__result .vermas, #fav_content .content_title .btn_back, #create_content .createMain_container .create_center .button_record,
 #create_content .createMain_container .create_center .button_start,
 #create_content .createMain_container .create_center .button_stop,
-#create_content .createMain_container .create_center .button_upload, .header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #content .search__result .result__gallery .search_error-container .search_error-text, #fav_content .content_title .content_text, #misGif_content .content_title .content_text, #misGif_content .content_title .btn_back, #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text, #create_content .createMain_container .create_center .center_screen .screen_main .screen_title, #create_content .createMain_container .create_center .center_buttons_container .restartButton {
+#create_content .createMain_container .create_center .button_upload, #content .search__result .result__gallery .error-container .error-text, #fav_content .fav_gallery .error-container .error-text, #misGif_content .misGif_gallery .error-container .error-text, .header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #fav_content .content_title .content_text, #misGif_content .content_title .content_text, #misGif_content .content_title .btn_back, #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text, #create_content .createMain_container .create_center .center_screen .screen_main .screen_title, #create_content .createMain_container .create_center .center_buttons_container .restartButton {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user, #hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer, #max .max_foot .max_text .max_user, #create_content .createMain_container .create_center .center_screen .screen_main .screen_paragraph {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_details .gif_user, #hero .hero__search input, #hero .hero__search .search__recomend .recomend__result, #trend .trend__title p, #footer, #max .max_foot .max_text .max_user, #create_content .createMain_container .create_center .center_screen .screen_main .screen_paragraph {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title, #create_content .createMain_container .create_center .center_buttons_container .center_buttons .stepButton {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_details .gif_title, #max .max_foot .max_text .max_title, #create_content .createMain_container .create_center .center_buttons_container .center_buttons .stepButton {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
@@ -47,23 +47,39 @@
   background-color: #572ee5;
 }
 
-#trend .trend__imgs .result_container .gif_hover, #content .search__result .result__gallery .result_container .gif_hover, #fav_content .fav_gallery .result_container_fav .gif_hover {
+#content .search__result .result__gallery .error-container, #fav_content .fav_gallery .error-container, #misGif_content .misGif_gallery .error-container {
+  text-align: center;
+  padding: 0px 0px 100px 0;
+}
+
+#content .search__result .result__gallery .error-container .error-img, #fav_content .fav_gallery .error-container .error-img, #misGif_content .misGif_gallery .error-container .error-img {
+  padding: 20px 0;
+}
+
+#content .search__result .result__gallery .error-container .error-text, #fav_content .fav_gallery .error-container .error-text, #misGif_content .misGif_gallery .error-container .error-text {
+  margin: 0 auto;
+  max-width: 400px;
+  font-size: 22px;
+  color: #50e3c2;
+}
+
+#trend .trend__imgs .result_container .gif_hover, #content .search__result .result__gallery .result_container .gif_hover, #fav_content .fav_gallery .result_container_fav .gif_hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover {
   display: block;
   position: absolute;
   top: 0;
   background-color: rgba(87, 46, 229, 0.7);
   width: 100%;
-  height: 100%;
+  height: 98%;
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#trend .trend__imgs .result_container .gif_hover:hover, #content .search__result .result__gallery .result_container .gif_hover:hover, #fav_content .fav_gallery .result_container_fav .gif_hover:hover {
+#trend .trend__imgs .result_container .gif_hover:hover, #content .search__result .result__gallery .result_container .gif_hover:hover, #fav_content .fav_gallery .result_container_fav .gif_hover:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover:hover {
   opacity: 100;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons, #content .search__result .result__gallery .result_container .gif_hover .gif_icons, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons {
+#trend .trend__imgs .result_container .gif_hover .gif_icons, #content .search__result .result__gallery .result_container .gif_hover .gif_icons, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons {
   padding: 10px;
   position: absolute;
   top: 0;
@@ -73,68 +89,68 @@
   display: flex;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .icon, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .icon, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .icon {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .icon, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .icon, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .icon, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .icon {
   margin: 0 5px;
   width: 32px;
   height: 32px;
   cursor: pointer;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconTrash {
   background-image: url("/assets/icon-trash-normal.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash:hover {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconTrash:hover {
   background-image: url("/assets/icon-trash-hover.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconFav {
   background-image: url("/assets/icon-fav.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:hover {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconFav:hover {
   background-image: url("/assets/icon-fav-hover.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:active, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:active, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:active {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:active, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:active, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:active, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconFav:active {
   background-image: url("/assets/icon-fav-active.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconDownload {
   background-image: url("/assets/icon-download.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload:hover {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconDownload:hover {
   background-image: url("/assets/icon-download-hover.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconBig {
   background-image: url("/assets/icon-max-normal.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig:hover {
+#trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconBig:hover {
   background-image: url("/assets/icon-max-hover.svg");
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_icons img, #content .search__result .result__gallery .result_container .gif_hover .gif_icons img, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons img {
+#trend .trend__imgs .result_container .gif_hover .gif_icons img, #content .search__result .result__gallery .result_container .gif_hover .gif_icons img, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons img, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons img {
   cursor: pointer;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details, #content .search__result .result__gallery .result_container .gif_hover .gif_details, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details {
+#trend .trend__imgs .result_container .gif_hover .gif_details, #content .search__result .result__gallery .result_container .gif_hover .gif_details, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_details {
   padding: 15px;
   position: absolute;
   left: 0;
   bottom: 0;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_user, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_user, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_user, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_details .gif_user {
   color: white;
   font-size: 15px;
 }
 
-#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title {
+#trend .trend__imgs .result_container .gif_hover .gif_details .gif_title, #content .search__result .result__gallery .result_container .gif_hover .gif_details .gif_title, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_details .gif_title, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_details .gif_title {
   color: white;
   font-size: 16px;
 }
@@ -626,20 +642,6 @@
   height: 160px;
 }
 
-#content .search__result .result__gallery .search_error-container {
-  text-align: center;
-  padding: 50px 0;
-}
-
-#content .search__result .result__gallery .search_error-container .search_error-img {
-  padding: 20px 0;
-}
-
-#content .search__result .result__gallery .search_error-container .search_error-text {
-  font-size: 22px;
-  color: #50e3c2;
-}
-
 @media (min-width: 700px) {
   #content .search__result .result__title {
     font-size: 35px;
@@ -765,6 +767,28 @@
 #misGif_content .content_title .btn_back:hover {
   color: white;
   background-color: #572ee5;
+}
+
+#misGif_content .misGif_gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#misGif_content .misGif_gallery .result_container_misGif {
+  position: relative;
+  margin: 20px;
+}
+
+#misGif_content .misGif_gallery .result_container_misGif .gif_result {
+  width: 260px;
+  height: 200px;
 }
 
 #create_content {

@@ -27,4 +27,20 @@
             }
         }
     }
+    .misGif_gallery {
+        @extend %error;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        .result_container_misGif {
+            position: relative;
+            margin: 20px;
+            @extend %hover;
+            .gif_result {
+                width: 260px;
+                height: 200px;
+            }
+        }
+    }
 }

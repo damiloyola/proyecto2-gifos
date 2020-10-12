@@ -23,3 +23,4 @@ const $favContainer = document.getElementById("fav_content");
 const $misGifContainer = document.getElementById("misGif_content");
 const $createContainer = document.getElementById("create_content");
 const $trendContainer = document.getElementById("trend");
+const $favGallery = document.querySelector(".fav_gallery");
