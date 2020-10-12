@@ -112,3 +112,12 @@ const uploadRecord = async () => {
 };
 
 $uploadBtn.addEventListener("click", uploadRecord);
+$restartBtn.addEventListener("click", () => {
+    $uploadBtn.style.display = "none";
+    $mainOverlay.classList.add("hide");
+    $step3.classList.remove("active");
+    $mainVideo.classList.remove("hide");
+    $mainGif.classList.add("hide");
+    recorder.clearRecordedData();
+    record();
+});

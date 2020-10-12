@@ -895,6 +895,7 @@
 
 #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_download,
 #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_link {
+  outline: none;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
