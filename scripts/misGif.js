@@ -46,7 +46,6 @@ const deleteMisGif = (url) => {
     populateMisGif();
 };
 
-const $misGifGallery = document.querySelector(".misGif_gallery");
 const populateMisGif = () => {
     const misGifLocalStorage = JSON.parse(localStorage.getItem("MisGifs"));
     $misGifGallery.innerHTML = "";

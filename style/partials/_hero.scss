@@ -1,9 +1,14 @@
 #hero {
     padding-top: 170px;
-
+    body.darkMode & {
+        background-color: $light-grey;
+    }
     .hero__title {
         text-align: center;
         color: $violet;
+        body.darkMode & {
+            color: white;
+        }
         @extend %montserrat-bold;
         padding: 0 2.75rem;
         span {
@@ -27,7 +32,7 @@
 
         .searching {
             border-radius: 27px 27px 0 0;
-            border-bottom: 2px solid #9cafc3;
+            border-bottom: 2px solid$grey;
         }
         input {
             border: 1px solid $violet;
@@ -38,6 +43,11 @@
             outline: none;
             font-size: 16px;
             @extend %roboto-regular;
+            body.darkMode & {
+                background-color: $light-grey;
+                border: 1px solid $grey;
+                color: $grey;
+            }
         }
         .search__recomend {
             width: 100%;
@@ -47,6 +57,10 @@
             padding: 2% 12%;
             list-style: none;
             list-style-image: url("/assets/icon-search.svg");
+            body.darkMode & {
+                border: 1px solid $grey;
+                list-style-image: url("/assets/icon-search-mod-noc.svg");
+            }
             .recomend__result {
                 @extend %roboto-regular;
                 padding: 2%;
@@ -56,9 +70,11 @@
                     background-color: white;
                     outline: none;
                     cursor: pointer;
-                    color: #9cafc3;
-
+                    color: $grey;
                     height: 100%;
+                    body.darkMode & {
+                        background-color: $light-grey;
+                    }
                 }
             }
         }
@@ -71,13 +87,17 @@
     }
 
     .hero__trending {
-        width: 50%;
-        margin: 31px auto;
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 30px;
         padding-bottom: 50px;
         text-align: center;
         h3 {
             color: $violet;
             @extend %montserrat-bold;
+            body.darkMode & {
+                color: white;
+            }
         }
         ul {
             list-style: none;
@@ -99,6 +119,15 @@
                     font-size: 16px;
                     border: 2px solid white;
                     background-color: white;
+                    body.darkMode & {
+                        color: white;
+                        background-color: $light-grey;
+                        border: none;
+                        border-bottom: 2px solid $light-grey;
+                        &:hover {
+                            border-bottom: 2px solid $aqua;
+                        }
+                    }
                     &:hover {
                         border-bottom: 2px solid $aqua;
                     }

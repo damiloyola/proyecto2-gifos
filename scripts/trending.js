@@ -24,7 +24,7 @@ const displayTrendTags = async () => {
 };
 
 displayTrendTags();
-const $trendGifs = document.querySelector(".trend__imgs");
+
 const displayTrendGifs = async (limit) => {
     $trendGifs.innerHTML = "";
     const arr = await trending(trendingGifURL + "&limit=" + limit);

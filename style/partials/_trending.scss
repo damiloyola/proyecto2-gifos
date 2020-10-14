@@ -1,6 +1,9 @@
 #trend {
     background-color: #f3f5f8;
     padding: 50px 0 80px 0;
+    body.darkMode & {
+        background-color: $dark-grey;
+    }
     .trend__title {
         width: 50%;
         margin: 0 auto;
@@ -11,9 +14,15 @@
             font-size: 25px;
             @extend %montserrat-bold;
             color: $violet;
+            body.darkMode & {
+                color: white;
+            }
         }
         p {
             @extend %roboto-regular;
+            body.darkMode & {
+                color: white;
+            }
         }
     }
     .trend__imgs {
@@ -53,6 +62,12 @@
                 &:hover {
                     background-image: url(/assets/button-slider-left-hover.svg);
                 }
+                body.darkMode & {
+                    background-image: url(/assets/button-slider-left-md-noct.svg);
+                    &:hover {
+                        background-image: url(/assets/button-slider-left-hover.svg);
+                    }
+                }
             }
             .right_arrow {
                 outline: none;
@@ -63,6 +78,12 @@
                 background-image: url(/assets/button-slider-right.svg);
                 &:hover {
                     background-image: url(/assets/button-slider-right-hover.svg);
+                }
+                body.darkMode & {
+                    background-image: url(/assets/button-slider-right-md-noct.svg);
+                    &:hover {
+                        background-image: url(/assets/button-slider-right-hover.svg);
+                    }
                 }
             }
             .trend__imgs {

@@ -24,3 +24,26 @@ const $misGifContainer = document.getElementById("misGif_content");
 const $createContainer = document.getElementById("create_content");
 const $trendContainer = document.getElementById("trend");
 const $favGallery = document.querySelector(".fav_gallery");
+const $trendGifs = document.querySelector(".trend__imgs");
+const $misGifGallery = document.querySelector(".misGif_gallery");
+
+//CREATE
+const $mainVideo = document.getElementById("main_video");
+const $mainGif = document.querySelector(".main_gif");
+const $mainOverlay = document.querySelector(".main_overlay");
+const $textOverlay = document.querySelector(".overlay_text");
+const $imgOverlay = document.querySelector(".overlay_img");
+const $btnsOverlay = document.querySelector(".overlay_btns");
+const $downloadOverBtn = document.querySelector(".btn_over_download");
+const $screenTitle = document.querySelector(".screen_title");
+const $screenParagraph = document.querySelector(".screen_paragraph");
+const $startBtn = document.querySelector(".button_start");
+const $recordBtn = document.querySelector(".button_record");
+const $stopBtn = document.querySelector(".button_stop");
+const $uploadBtn = document.querySelector(".button_upload");
+const $restartBtn = document.querySelector(".restartButton");
+const $step1 = document.querySelector(".step1");
+const $step2 = document.querySelector(".step2");
+const $step3 = document.querySelector(".step3");
+
+//DARKMODE
