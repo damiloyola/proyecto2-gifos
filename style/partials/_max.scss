@@ -8,6 +8,7 @@
         text-align: right;
         width: 500px;
         margin: 0 auto;
+        cursor: pointer;
     }
     .img_max {
         display: block;
@@ -25,6 +26,11 @@
             }
             .max_title {
                 @extend %roboto-black;
+            }
+        }
+        .max__btns {
+            img {
+                cursor: pointer;
             }
         }
     }

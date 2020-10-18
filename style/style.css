@@ -8,7 +8,10 @@
 #content .search__result .vermas, #fav_content .btn_back, #misGif_content .btn_back, #create_content .createMain_container .create_center .button_record,
 #create_content .createMain_container .create_center .button_start,
 #create_content .createMain_container .create_center .button_stop,
-#create_content .createMain_container .create_center .button_upload, #content .search__result .result__gallery .error-container .error-text, #fav_content .fav_gallery .error-container .error-text, #misGif_content .misGif_gallery .error-container .error-text, .header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #fav_content .content_title .content_text, #misGif_content .content_title .content_text, #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text, #create_content .createMain_container .create_center .center_screen .screen_main .screen_title, #create_content .createMain_container .create_center .center_buttons_container .restartButton {
+#create_content .createMain_container .create_center .button_upload, #content .search__result .result__gallery .error-container .error-text, #fav_content .fav_gallery .error-container .error-text, #misGif_content .misGif_gallery .error-container .error-text,
+#content .search__result .result__gallery .error-container p,
+#fav_content .fav_gallery .error-container p,
+#misGif_content .misGif_gallery .error-container p, .header__container #header .header__menu .menu__ul, #hero .hero__title, #hero .hero__trending h3, #trend .trend__title h2, #content .search__result .result__title, #fav_content .content_title .content_text, #misGif_content .content_title .content_text, #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_text, #create_content .createMain_container .create_center .center_screen .screen_main .screen_title, #create_content .createMain_container .create_center .center_buttons_container .restartButton {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -72,7 +75,10 @@ body.darkMode #create_content .createMain_container .create_center .button_uploa
   padding: 20px 0;
 }
 
-#content .search__result .result__gallery .error-container .error-text, #fav_content .fav_gallery .error-container .error-text, #misGif_content .misGif_gallery .error-container .error-text {
+#content .search__result .result__gallery .error-container .error-text, #fav_content .fav_gallery .error-container .error-text, #misGif_content .misGif_gallery .error-container .error-text,
+#content .search__result .result__gallery .error-container p,
+#fav_content .fav_gallery .error-container p,
+#misGif_content .misGif_gallery .error-container p {
   margin: 0 auto;
   max-width: 400px;
   font-size: 22px;
@@ -429,6 +435,8 @@ body.darkMode #hero .hero__title {
 }
 
 #hero .hero__search input {
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
   border: 1px solid #572ee5;
   border-radius: 27px;
   background-color: #fff;
@@ -439,6 +447,8 @@ body.darkMode #hero .hero__title {
 }
 
 body.darkMode #hero .hero__search input {
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
   background-color: #37383c;
   border: 1px solid #9cafc3;
   color: #9cafc3;
@@ -561,9 +571,13 @@ body.darkMode #hero .hero__trending ul li button:hover {
 #trend {
   background-color: #f3f5f8;
   padding: 50px 0 80px 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 body.darkMode #trend {
+  -webkit-transition: 1s;
+  transition: 1s;
   background-color: #222326;
 }
 
@@ -662,6 +676,7 @@ body.darkMode #trend .trend__title p {
   }
   #trend .trend_container .trend__imgs {
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   #trend .trend_container .trend__imgs .result_container .gif_result {
     width: 400px;
@@ -865,6 +880,7 @@ body.darkMode #fav_content .content_title .content_text {
   text-align: right;
   width: 500px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 #max .img_max {
@@ -882,6 +898,10 @@ body.darkMode #fav_content .content_title .content_text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+#max .max_foot .max__btns img {
+  cursor: pointer;
 }
 
 #misGif_content {

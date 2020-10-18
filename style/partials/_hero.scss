@@ -38,6 +38,7 @@
             border-bottom: 2px solid$grey;
         }
         input {
+            transition: background-color 1s;
             border: 1px solid $violet;
             border-radius: 27px;
             background-color: #fff;
@@ -47,6 +48,7 @@
             font-size: 16px;
             @extend %roboto-regular;
             body.darkMode & {
+                transition: background-color 1s;
                 background-color: $light-grey;
                 border: 1px solid $grey;
                 color: $grey;

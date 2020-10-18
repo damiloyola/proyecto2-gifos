@@ -39,7 +39,11 @@ const autocompleteSearch = async (text) => {
         $searchUlRecomend.classList.remove("hide");
         $searchUlRecomend.innerHTML = "";
         $searchInput.classList.add("searching");
-        $searchIcon.src = "assets/close.svg";
+        if (localStorage.getItem("mode") === "dark") {
+            $searchIcon.src = "assets/close-modo-noct.svg";
+        } else {
+            $searchIcon.src = "assets/close.svg";
+        }
     }
     //se realiza el fetch y se guardan los datos en array results
     const response = await fetch(recomendUrl + text + "&limit=4");
@@ -110,7 +114,11 @@ const hideRecomended = () => {
     $searchInput.classList.remove("searching");
 
     $searchInput.value = "";
-    $searchIcon.src = "assets/icon-search.svg";
+    if (localStorage.getItem("mode") === "dark") {
+        $searchIcon.src = "assets/icon-search-mod-noc.svg";
+    } else {
+        $searchIcon.src = "assets/icon-search.svg";
+    }
 };
 
 const addHovers = () => {

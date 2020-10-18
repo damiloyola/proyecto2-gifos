@@ -7,7 +7,11 @@ const goToFav = () => {
     $mainContainer.classList.add("hide");
     $burgerMenuUl.classList.add("hide");
     $sectionMax.classList.add("hide");
-    $burgerBtn.src = "assets/burger.svg";
+    if (localStorage.getItem("mode") === "dark") {
+        $burgerBtn.src = "assets/burger-modo-noct.svg";
+    } else {
+        $burgerBtn.src = "assets/burger.svg";
+    }
 };
 
 const goToMisGif = () => {
@@ -18,7 +22,11 @@ const goToMisGif = () => {
     $misGifContainer.classList.remove("hide");
     $burgerMenuUl.classList.add("hide");
     $sectionMax.classList.add("hide");
-    $burgerBtn.src = "assets/burger.svg";
+    if (localStorage.getItem("mode") === "dark") {
+        $burgerBtn.src = "assets/burger-modo-noct.svg";
+    } else {
+        $burgerBtn.src = "assets/burger.svg";
+    }
 };
 const goToCreate = () => {
     $trendContainer.classList.add("hide");
@@ -29,7 +37,11 @@ const goToCreate = () => {
     $createContainer.classList.remove("hide");
     $burgerMenuUl.classList.add("hide");
     $sectionMax.classList.add("hide");
-    $burgerBtn.src = "assets/burger.svg";
+    if (localStorage.getItem("mode") === "dark") {
+        $burgerBtn.src = "assets/burger-modo-noct.svg";
+    } else {
+        $burgerBtn.src = "assets/burger.svg";
+    }
 };
 
 // ** MAX GIF **//

@@ -49,11 +49,18 @@ const deleteMisGif = (url) => {
 const populateMisGif = () => {
     const misGifLocalStorage = JSON.parse(localStorage.getItem("MisGifs"));
     $misGifGallery.innerHTML = "";
+    let err;
     if (misGifLocalStorage.length == 0) {
+        if (window.innerWidth < 800) {
+            err = "(solo disponible en version escritorio)";
+        } else {
+            err = "";
+        }
         $misGifGallery.innerHTML = `
         <div class ="error-container">
         <img class="error-img"  src="assets/icon-mis-gifos-sin-contenido.svg" alt="Sin resultados de busqueda" >
         <h4 class="error-text">¡Animate a crear tu primer GIFO!</h4>
+        <p>${err}</p>
         </div> `;
     } else {
         for (let i = 0; i < misGifLocalStorage.length; i++) {

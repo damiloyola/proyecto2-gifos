@@ -1,7 +1,9 @@
 #trend {
     background-color: #f3f5f8;
     padding: 50px 0 80px 0;
+    transition: 1s;
     body.darkMode & {
+        transition: 1s;
         background-color: $dark-grey;
     }
     .trend__title {
@@ -88,7 +90,7 @@
             }
             .trend__imgs {
                 overflow-x: hidden;
-
+                scroll-behavior: smooth;
                 .result_container {
                     .gif_result {
                         width: 400px;

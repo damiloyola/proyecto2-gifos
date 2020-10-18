@@ -59,7 +59,8 @@ $dark-grey: #222326;
         .error-img {
             padding: 20px 0;
         }
-        .error-text {
+        .error-text,
+        p {
             margin: 0 auto;
             max-width: 400px;
             @extend %montserrat-bold;

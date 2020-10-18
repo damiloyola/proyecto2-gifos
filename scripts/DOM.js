@@ -7,7 +7,6 @@ const $headerSearchIcon = document.querySelector(".header_search__icon");
 const $resultGallery = document.querySelector(".result__gallery");
 const $resultTitle = document.querySelector(".result__title");
 const $verMasBtn = document.querySelector(".vermas");
-
 const $burgerBtn = document.querySelector(".menu__burguer");
 const $burgerMenuUl = document.querySelector(".menu__ul");
 
@@ -16,6 +15,7 @@ const $imgMax = document.querySelector(".img_max");
 const $sectionMax = document.getElementById("max");
 const $sectionHero = document.getElementById("hero");
 const $closeMax = document.querySelector(".max__close");
+const $closMaxIcon = document.querySelector(".max_close_icon");
 
 //SECTION CONTAINERS
 const $mainContainer = document.getElementById("content");

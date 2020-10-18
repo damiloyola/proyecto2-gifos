@@ -3,10 +3,18 @@
 const burgerToggle = () => {
     if ($burgerMenuUl.classList.contains("hide")) {
         $burgerMenuUl.classList.remove("hide");
-        $burgerBtn.src = "assets/close.svg";
+        if (localStorage.getItem("mode") === "light") {
+            $burgerBtn.src = "assets/close.svg";
+        } else {
+            $burgerBtn.src = "assets/close-modo-noct.svg";
+        }
     } else {
         $burgerMenuUl.classList.add("hide");
-        $burgerBtn.src = "assets/burger.svg";
+        if (localStorage.getItem("mode") === "light") {
+            $burgerBtn.src = "assets/burger.svg";
+        } else {
+            $burgerBtn.src = "assets/burger-modo-noct.svg";
+        }
     }
 };
 
