@@ -1,5 +1,8 @@
 #fav_content {
     padding-top: 170px;
+    body.darkMode & {
+        background-color: $light-grey;
+    }
     .fav_gallery {
         @extend %error;
         display: flex;
@@ -21,14 +24,17 @@
         text-align: center;
         .content_text {
             color: #572ee5;
+            body.darkMode & {
+                color: white;
+            }
             @extend %montserrat-bold;
             font-size: 25px;
             @media (min-width: 700px) {
                 font-size: 35px;
             }
         }
-        .btn_back {
-            @extend %btn;
-        }
+    }
+    .btn_back {
+        @extend %btn;
     }
 }

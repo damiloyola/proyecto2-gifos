@@ -1,7 +1,10 @@
 #hero {
+    transition: 1s;
+    background-color: white;
     padding-top: 170px;
     body.darkMode & {
         background-color: $light-grey;
+        transition: 1s;
     }
     .hero__title {
         text-align: center;
@@ -111,7 +114,7 @@
                 margin-bottom: 5px;
                 button {
                     cursor: pointer;
-                    transition: 0.5s;
+                    transition: 1s;
                     outline: none;
                     text-decoration: none;
                     color: $violet;
@@ -120,10 +123,11 @@
                     border: 2px solid white;
                     background-color: white;
                     body.darkMode & {
+                        transition: 1s;
                         color: white;
                         background-color: $light-grey;
                         border: none;
-                        border-bottom: 2px solid $light-grey;
+                        border: 2px solid $light-grey;
                         &:hover {
                             border-bottom: 2px solid $aqua;
                         }

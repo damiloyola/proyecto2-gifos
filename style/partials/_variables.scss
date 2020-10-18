@@ -28,6 +28,7 @@ $dark-grey: #222326;
 %btn {
     @extend %montserrat-bold;
     color: $violet;
+
     padding: 8px 16px;
     border: 1px solid $violet;
     border-radius: 25px;
@@ -36,9 +37,19 @@ $dark-grey: #222326;
     text-align: center;
     margin: 50px auto;
     transition: 0.5s;
+
     &:hover {
         color: white;
         background-color: $violet;
+    }
+
+    body.darkMode & {
+        color: $grey;
+        border: 1px solid $grey;
+        &:hover {
+            color: $light-grey;
+            background-color: white;
+        }
     }
 }
 %error {
