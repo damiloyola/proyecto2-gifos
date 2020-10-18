@@ -15,6 +15,7 @@ const goToFav = () => {
 };
 
 const goToMisGif = () => {
+    populateMisGif();
     $sectionHero.classList.add("hide");
     $favContainer.classList.add("hide");
     $createContainer.classList.add("hide");
@@ -67,12 +68,14 @@ const showMax = (url, user, title) => {
         $favMaxBtn.src = "/assets/icon-fav.svg";
         $favMaxBtn.addEventListener("click", () => {
             addFav(url, user, title);
+
             showMax(url, user, title);
         });
     } else {
         $favMaxBtn.src = "/assets/icon-trash-normal.svg";
         $favMaxBtn.addEventListener("click", () => {
             deleteFav(url);
+
             showMax(url, user, title);
         });
     }

@@ -34,7 +34,7 @@ const populateFavGif = () => {
         for (let i = 0; i < gifsLocalstorage.length; i++) {
             const gifContainer = document.createElement("div");
             gifContainer.classList.add("result_container_fav");
-            gifContainer.innerHTML = `<img class="gif_result" src="${gifsLocalstorage[i].url}" alt="${gifsLocalstorage[i].title}"></img>
+            gifContainer.innerHTML = `<img onclick="showMax('${gifsLocalstorage[i].url}','${gifsLocalstorage[i].user}','${gifsLocalstorage[i].title}')" class="gif_result" src="${gifsLocalstorage[i].url}" alt="${gifsLocalstorage[i].title}"></img>
             <div class="gif_hover hide">
                <div class="gif_icons">
                    <div class="icon iconTrash" onclick="deleteFav('${gifsLocalstorage[i].url}')"></div>

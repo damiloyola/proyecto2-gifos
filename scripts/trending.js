@@ -32,8 +32,8 @@ const displayTrendGifs = async (limit) => {
     arr.data.forEach((i) => {
         const div = document.createElement("div");
         div.classList.add("result_container");
-        div.innerHTML = `<img class="gif_result" src="${i.images.original.url}" alt="${i.title}"></img>
-                       <div class="gif_hover hide">
+        div.innerHTML = `<img class="gif_result" onclick="showMax('${i.images.original.url}','${i.username}','${i.title}')" src="${i.images.original.url}" alt="${i.title}"></img>
+                       <div class="gif_hover">
                           <div class="gif_icons">
                           <div class="icon iconFav" onclick="addFav('${i.images.original.url}','${i.username}','${i.title}')"></div>
                               <div class="icon iconDownload"  onclick="downloadGif('${i.images.original.url}','${i.title}')"></div>
@@ -48,13 +48,13 @@ const displayTrendGifs = async (limit) => {
 
         $trendGifs.appendChild(div);
 
-        const $gifHover = document.querySelector(".gif_hover");
-        div.addEventListener("mouseenter", (e) => {
-            $gifHover.classList.remove("hide");
-        });
-        div.addEventListener("mouseout", (e) => {
-            $gifHover.classList.add("hide");
-        });
+        // const $gifHover = document.querySelector(".gif_hover");
+        // div.addEventListener("mouseenter", (e) => {
+        //     $gifHover.classList.remove("hide");
+        // });
+        // div.addEventListener("mouseout", (e) => {
+        //     $gifHover.classList.add("hide");
+        // });
     });
 };
 

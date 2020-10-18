@@ -81,7 +81,7 @@ const populateGallery = (arr) => {
         for (let i = 0; i < arr.length; i++) {
             const div = document.createElement("div");
             div.classList.add("result_container");
-            div.innerHTML = `<img class="gif_result" src="${arr[i].images.original.url}" alt="${arr[i].title}"></img>
+            div.innerHTML = `<img class="gif_result" onclick="showMax('${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')" src="${arr[i].images.original.url}" alt="${arr[i].title}"></img>
                              <div class="gif_hover hide">
                                 <div class="gif_icons">
                                     <div class="icon iconFav" onclick="addFav('${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')"></div>

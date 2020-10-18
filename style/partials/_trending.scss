@@ -43,6 +43,9 @@
                 height: 190px;
             }
             @extend %hover;
+            .gif_hover {
+                display: none;
+            }
         }
     }
 }
@@ -92,6 +95,9 @@
                 overflow-x: hidden;
                 scroll-behavior: smooth;
                 .result_container {
+                    .gif_hover {
+                        display: block;
+                    }
                     .gif_result {
                         width: 400px;
                         height: 275px;

@@ -12,11 +12,20 @@
         .result_container_fav {
             position: relative;
             margin: 20px;
-            @extend %hover;
+
             .gif_result {
                 width: 260px;
                 height: 200px;
             }
+            .gif_hover {
+                display: none;
+            }
+            @media (min-width: 700px) {
+                .gif_hover {
+                    display: block;
+                }
+            }
+            @extend %hover;
         }
     }
 

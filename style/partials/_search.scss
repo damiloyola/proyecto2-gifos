@@ -25,10 +25,14 @@
             .result_container {
                 margin: 20px;
                 position: relative;
-                @extend %hover;
+
                 .gif_result {
                     width: 190px;
                     height: 160px;
+                }
+                @extend %hover;
+                .gif_hover {
+                    display: none;
                 }
             }
             @extend %error;
@@ -48,11 +52,13 @@
             .result__gallery {
                 .result_container {
                     padding: 20px;
+
                     .gif_result {
                         width: 260px;
                         height: 200px;
                     }
                     .gif_hover {
+                        display: block;
                         position: absolute;
                         top: 20px;
                         background-color: transparentize(#572ee5, 0.3);
