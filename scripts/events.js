@@ -60,6 +60,7 @@ const showMax = (url, user, title) => {
     $misGifContainer.classList.add("hide");
     $mainContainer.classList.add("hide");
     $createContainer.classList.add("hide");
+    $footerContainer.classList.add("hide");
     $imgMax.src = url;
     window.scrollTo({ top: 0, behavior: "auto" });
     if (arrFav.find((element) => element.url === url) == undefined) {

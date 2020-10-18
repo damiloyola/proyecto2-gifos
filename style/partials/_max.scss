@@ -1,31 +1,39 @@
 #max {
-    padding: 125px 100px;
-    // margin-bottom: 100px;
+    padding: 30px;
+    padding-top: 100px;
     width: 100%;
     height: 100vh;
 
     .max__close {
         text-align: right;
-        width: 500px;
+        max-width: 500px;
         margin: 0 auto;
         cursor: pointer;
     }
     .img_max {
         display: block;
         margin: 20px auto;
-        width: 500px;
+        max-width: 80%;
     }
     .max_foot {
-        width: 500px;
         margin: 0 auto;
+        max-width: 500px;
         display: flex;
         justify-content: space-between;
         .max_text {
+            width: 70%;
+            padding-bottom: 50px;
             .max_user {
                 @extend %roboto-regular;
+                body.darkMode & {
+                    color: white;
+                }
             }
             .max_title {
                 @extend %roboto-black;
+                body.darkMode & {
+                    color: white;
+                }
             }
         }
         .max__btns {
@@ -33,5 +41,11 @@
                 cursor: pointer;
             }
         }
+    }
+}
+
+@media (min-width: 970px) {
+    #max {
+        padding: 125px 100px;
     }
 }

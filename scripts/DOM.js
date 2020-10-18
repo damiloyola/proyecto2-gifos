@@ -26,6 +26,7 @@ const $trendContainer = document.getElementById("trend");
 const $favGallery = document.querySelector(".fav_gallery");
 const $trendGifs = document.querySelector(".trend__imgs");
 const $misGifGallery = document.querySelector(".misGif_gallery");
+const $footerContainer = document.getElementById("footer");
 
 //CREATE
 const $mainVideo = document.getElementById("main_video");

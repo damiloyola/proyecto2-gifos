@@ -729,7 +729,7 @@ body.darkMode #footer p {
 }
 
 @media (min-width: 700px) {
-  #footer {
+  #footer .footer_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -741,7 +741,7 @@ body.darkMode #footer p {
             align-items: center;
     padding: 2.5% 5%;
   }
-  #footer .footer__social {
+  #footer .footer_container .footer__social {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -751,7 +751,7 @@ body.darkMode #footer p {
     padding: 0;
     margin: 0;
   }
-  #footer .footer__social p {
+  #footer .footer_container .footer__social p {
     height: 15px;
     margin: 0;
   }
@@ -871,14 +871,15 @@ body.darkMode #fav_content .content_title .content_text {
 }
 
 #max {
-  padding: 125px 100px;
+  padding: 30px;
+  padding-top: 100px;
   width: 100%;
   height: 100vh;
 }
 
 #max .max__close {
   text-align: right;
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -886,12 +887,12 @@ body.darkMode #fav_content .content_title .content_text {
 #max .img_max {
   display: block;
   margin: 20px auto;
-  width: 500px;
+  max-width: 80%;
 }
 
 #max .max_foot {
-  width: 500px;
   margin: 0 auto;
+  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -900,8 +901,27 @@ body.darkMode #fav_content .content_title .content_text {
           justify-content: space-between;
 }
 
+#max .max_foot .max_text {
+  width: 70%;
+  padding-bottom: 50px;
+}
+
+body.darkMode #max .max_foot .max_text .max_user {
+  color: white;
+}
+
+body.darkMode #max .max_foot .max_text .max_title {
+  color: white;
+}
+
 #max .max_foot .max__btns img {
   cursor: pointer;
+}
+
+@media (min-width: 970px) {
+  #max {
+    padding: 125px 100px;
+  }
 }
 
 #misGif_content {
