@@ -1,5 +1,6 @@
 #create_content {
     padding-top: 130px;
+    padding-bottom: 100px;
     .createMain_container {
         padding: 0 50px;
         display: flex;
@@ -18,6 +19,9 @@
             text-align: center;
             .center_screen {
                 border: 1px solid $violet;
+                body.darkMode & {
+                    border: 1px solid white;
+                }
                 height: 390px;
                 display: flex;
                 flex-direction: column;
@@ -116,6 +120,9 @@
 
                     .screen_title {
                         color: $violet;
+                        body.darkMode & {
+                            color: white;
+                        }
                         font-size: 25px;
                         padding-bottom: 20px;
                         @extend %montserrat-bold;
@@ -124,6 +131,9 @@
                         }
                     }
                     .screen_paragraph {
+                        body.darkMode & {
+                            color: white;
+                        }
                         font-size: 16px;
                         line-height: 29px;
                         @extend %roboto-regular;
@@ -139,6 +149,9 @@
                 .restartButton {
                     @extend %montserrat-bold;
                     color: $violet;
+                    body.darkMode & {
+                        color: white;
+                    }
                     float: right;
                     margin-top: -35px;
                     font-size: 13px;
@@ -164,6 +177,10 @@
                         border-radius: 50%;
                         line-height: 160%;
                         margin: 10px;
+                        body.darkMode & {
+                            color: white;
+                            border: 1px solid white;
+                        }
                     }
                     .active {
                         color: white;
@@ -173,7 +190,9 @@
             }
 
             .center_line {
+                border: none;
                 border-top: 7px solid $violet;
+                border-radius: 5px;
             }
 
             .button_record,

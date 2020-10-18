@@ -1007,6 +1007,7 @@ body.darkMode #misGif_content .content_title .content_text {
 
 #create_content {
   padding-top: 130px;
+  padding-bottom: 100px;
 }
 
 #create_content .createMain_container {
@@ -1050,6 +1051,10 @@ body.darkMode #misGif_content .content_title .content_text {
           justify-content: space-between;
   position: relative;
   overflow: hidden;
+}
+
+body.darkMode #create_content .createMain_container .create_center .center_screen {
+  border: 1px solid white;
 }
 
 #create_content .createMain_container .create_center .center_screen .screen_topCorners {
@@ -1166,6 +1171,10 @@ body.darkMode #misGif_content .content_title .content_text {
   padding-bottom: 20px;
 }
 
+body.darkMode #create_content .createMain_container .create_center .center_screen .screen_main .screen_title {
+  color: white;
+}
+
 #create_content .createMain_container .create_center .center_screen .screen_main .screen_title .screen_span {
   color: #50e3c2;
 }
@@ -1173,6 +1182,10 @@ body.darkMode #misGif_content .content_title .content_text {
 #create_content .createMain_container .create_center .center_screen .screen_main .screen_paragraph {
   font-size: 16px;
   line-height: 29px;
+}
+
+body.darkMode #create_content .createMain_container .create_center .center_screen .screen_main .screen_paragraph {
+  color: white;
 }
 
 #create_content .createMain_container .create_center .center_buttons_container {
@@ -1191,6 +1204,10 @@ body.darkMode #misGif_content .content_title .content_text {
   border-bottom: 2px solid white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+body.darkMode #create_content .createMain_container .create_center .center_buttons_container .restartButton {
+  color: white;
 }
 
 #create_content .createMain_container .create_center .center_buttons_container .restartButton:hover {
@@ -1219,13 +1236,20 @@ body.darkMode #misGif_content .content_title .content_text {
   margin: 10px;
 }
 
+body.darkMode #create_content .createMain_container .create_center .center_buttons_container .center_buttons .stepButton {
+  color: white;
+  border: 1px solid white;
+}
+
 #create_content .createMain_container .create_center .center_buttons_container .center_buttons .active {
   color: white;
   background-color: #572ee5;
 }
 
 #create_content .createMain_container .create_center .center_line {
+  border: none;
   border-top: 7px solid #572ee5;
+  border-radius: 5px;
 }
 
 #create_content .createMain_container .create_center .button_record,

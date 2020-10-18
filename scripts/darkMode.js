@@ -23,6 +23,8 @@ const changeMode = () => {
         $headerSearchIcon.src = "assets/icon-search-mod-noc.svg";
         $searchIcon.src = "assets/icon-search-mod-noc.svg";
         $closMaxIcon.src = "/assets/close-modo-noct.svg";
+        $rollo.src = "/assets/pelicula-modo-noc.svg";
+        $camera.src = "/assets/camara-modo-noc.svg";
     } else {
         document.body.classList.remove("darkMode");
         $modeBtn.innerHTML = "Modo Oscuro";
@@ -31,6 +33,8 @@ const changeMode = () => {
         $headerSearchIcon.src = "assets/icon-search.svg";
         $searchIcon.src = "assets/icon-search.svg";
         $closMaxIcon.src = "/assets/close.svg";
+        $camera.src = "/assets/camara.svg";
+        $rollo.src = "/assets/pelicula.svg";
     }
 };
 changeMode();
