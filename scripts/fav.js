@@ -24,7 +24,7 @@ const addFav = (url, user, title) => {
 const populateFavGif = () => {
     const gifsLocalstorage = JSON.parse(localStorage.getItem("FavGifs"));
     $favGallery.innerHTML = "";
-    if (gifsLocalstorage.length == 0) {
+    if (gifsLocalstorage == null || gifsLocalstorage.length == 0) {
         $favGallery.innerHTML = `
         <div class ="error-container">
         <img class="error-img"  src="assets/icon-fav-sin-contenido.svg" alt="Sin resultados de busqueda" >
