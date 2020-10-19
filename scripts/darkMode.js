@@ -28,7 +28,7 @@ const changeMode = () => {
     } else {
         document.body.classList.remove("darkMode");
         $modeBtn.innerHTML = "Modo Oscuro";
-        $logo.src = "/assets/logo-desktop (1).svg";
+        $logo.src = "/assets/logo-desktop(1).svg";
         $burgerBtn.src = "assets/burger.svg";
         $headerSearchIcon.src = "assets/icon-search.svg";
         $searchIcon.src = "assets/icon-search.svg";

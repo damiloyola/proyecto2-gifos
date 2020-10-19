@@ -1,266 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+            integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+            crossorigin="anonymous"
+        />
 
-    <link rel="stylesheet" href="style/style.css" />
-    <title>GifOs</title>
-    <link rel="icon" href="/assets/logo-mobile.svg">
-  </head>
-  <body>
-    <!--------- HEADER ---------->
-    <section class="header__container">
-      <header id="header">
-      
-        <a href="index.html"><img class= header__logo src="/assets/logo-desktop (1).svg" alt=""></a>
-        <div class="header__menu">
-          <img
-            src="assets/burger.svg"
-            alt="Menu hamburguesa"
-            class="menu__burguer"
-          />
-
-          <ul class="menu__ul hide">
-            <li><div class="header__search hide">
-              <div class="header_search__container">
-                <input id="header_searchInput" type="text" placeholder="Busca GIFOS y más" />
-                <a href="#search"
-                  ><img
-                    src="assets/icon-search.svg"
-                    alt="icono de busqueda"
-                    class="header_search__icon"
+        <link rel="stylesheet" href="style/style.css" />
+        <title>GifOs</title>
+        <link rel="icon" href="/assets/logo-mobile.svg" />
+    </head>
+    <body>
+        <!--------- HEADER ---------->
+        <section class="header__container">
+            <header id="header">
+                <a href="index.html"
+                    ><img
+                        class="header__logo"
+                        src="/assets/logo-desktop(1).svg"
+                        alt=""
                 /></a>
-              </div>
-              <ul class="header_search__recomend hide"></ul>
-            </li>
-            <li><a href="#" onclick="darkMode()" class='modeBtn'>Modo oscuro</a></li>
-            <hr />
-            <li><a href="#" onclick="goToFav()">Favoritos</a></li>
-            <hr />
-            <li><a href="#" onclick="goToMisGif()">Mis GifOs</a></li>
-            <hr />
-            <li><a href="#" onclick="goToCreate()" class="btn__menu"></a></li>
-          </ul>
-        </div>
-      </header>
-    </section>
+                <div class="header__menu">
+                    <img
+                        src="assets/burger.svg"
+                        alt="Menu hamburguesa"
+                        class="menu__burguer"
+                    />
 
-    <!--------- HERO ---------->
-    <section id="hero">
-      <h1 class="hero__title">
-        Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span>
-      </h1>
-      <img
-        src="assets/ilustra_header.svg"
-        alt="ilustracion"
-        class="hero__img"
-      />
-      <div class="hero__search">
-        <div class="search__container">
-          <input id="searchInput" type="text" placeholder="Busca GIFOS y más" />
-          <a href="#search"
-            ><img
-              src="assets/icon-search.svg"
-              alt="icono de busqueda"
-              class="search__icon"
-          /></a>
-        </div>
-
-        <ul class="search__recomend hide"></ul>
-      </div>
-      <div class="hero__trending">
-        <h3>Trending:</h3>
-        <ul>
-          <li><button class = "trends" >Reactions,</button></li>
-          <li><button class = "trends">Entretainment,</button></li>
-          <li><button class = "trends">Sports,</button></li>
-          <li><button class = "trends">Stickers,</button></li>
-          <li><button class = "trends">Artists,</button></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- MAX -->
-    <section id="max" class="hide">
-      <div class="max__close">
-        <img class= max_close_icon src="/assets/close.svg" alt="">
-      </div>
-      <img class="img_max" src="" alt="">
-      <div class="max_foot">
-        <div class="max_text">
-          <span class="max_user">User</span>
-          <h4 class="max_title">Titulo</h4>
-        </div>
-        <div class="max__btns">
-          <img src="/assets/icon-trash-normal.svg" onclick= "handleMaxClick()"  alt="" id="addFav_max">
-          <img src="/assets/icon-download.svg" alt="">
-        </div>
-      </div>
-      
-    </section>
-
-    <!-- CREATE GIF -->
-
-    <section id="create_content" class="hide">
-      <div class="createMain_container">
-        <!-- dibujo camara -->
-        <div class="create_leftCamera">
-          <img src="/assets/camara.svg" alt="camara" class="camera">
-          <img src="/assets/element-luz-camara.svg" alt="luz camara" >
-        </div>
-
-        <!-- parte central -->
-        <div class="create_center">
-          <!-- pantalla -->
-          <div class="center_screen">
-            <div class="screen_topCorners">
-              <div class="screen_topLeft"></div>
-              <div class="screen_topRight"></div>
-              
-            </div>
-            <div class="screen_main">
-              <video id="main_video" class="hide" ></video>
-              <img src="" alt="" class="main_gif hide">
-              <div class="main_overlay hide">
-                <div class="overlay_btns hide">
-                    <button class="btn_over_download"></button>
-                    <button class="btn_over_link" onclick="goToMisGif()"></button>
-
+                    <ul class="menu__ul hide">
+                        <li>
+                            <div class="header__search hide">
+                                <div class="header_search__container">
+                                    <input
+                                        id="header_searchInput"
+                                        type="text"
+                                        placeholder="Busca GIFOS y más"
+                                    />
+                                    <a href="#search"
+                                        ><img
+                                            src="assets/icon-search.svg"
+                                            alt="icono de busqueda"
+                                            class="header_search__icon"
+                                    /></a>
+                                </div>
+                            </div>
+                            <ul class="header_search__recomend hide"></ul>
+                        </li>
+                        <li>
+                            <a href="#" onclick="darkMode()" class="modeBtn"
+                                >Modo oscuro</a
+                            >
+                        </li>
+                        <hr />
+                        <li><a href="#" onclick="goToFav()">Favoritos</a></li>
+                        <hr />
+                        <li>
+                            <a href="#" onclick="goToMisGif()">Mis GifOs</a>
+                        </li>
+                        <hr />
+                        <li>
+                            <a
+                                href="#"
+                                onclick="goToCreate()"
+                                class="btn__menu"
+                            ></a>
+                        </li>
+                    </ul>
                 </div>
-                <img src="/assets/loader.svg" alt="" class="overlay_img">
-                <p class="overlay_text"> Estamos subiendo tu GIFO</p>
-              </div>
-              <h2 class="screen_title">Aquí podrás crear tus propios <span class="screen_span">GIFOS</span></h2>
-              <p class="screen_paragraph"> ¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video)</p>
-            
+            </header>
+        </section>
+
+        <!--------- HERO ---------->
+        <section id="hero">
+            <h1 class="hero__title">
+                Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span>
+            </h1>
+            <img
+                src="assets/ilustra_header.svg"
+                alt="ilustracion"
+                class="hero__img"
+            />
+            <div class="hero__search">
+                <div class="search__container">
+                    <input
+                        id="searchInput"
+                        type="text"
+                        placeholder="Busca GIFOS y más"
+                    />
+                    <a href="#search"
+                        ><img
+                            src="assets/icon-search.svg"
+                            alt="icono de busqueda"
+                            class="search__icon"
+                    /></a>
+                </div>
+
+                <ul class="search__recomend hide"></ul>
             </div>
-            <div class="screen_botCorners">
-              <div class="screen_botLeft"></div>
-              <div class="screen_botRight"></div>
-              
+            <div class="hero__trending">
+                <h3>Trending:</h3>
+                <ul>
+                    <li><button class="trends">Reactions,</button></li>
+                    <li><button class="trends">Entretainment,</button></li>
+                    <li><button class="trends">Sports,</button></li>
+                    <li><button class="trends">Stickers,</button></li>
+                    <li><button class="trends">Artists,</button></li>
+                </ul>
             </div>
-          </div>
+        </section>
 
-          <!-- botones -->
-          <div class="center_buttons_container">
-            <div class="empty_placeholder"></div>
-            <div class="center_buttons">
-              <div class="stepButton step1">1</div>  
-              <div class="stepButton step2">2</div>  
-              <div class="stepButton step3">3</div>  
-              
+        <!-- MAX -->
+        <section id="max" class="hide">
+            <div class="max__close">
+                <img class="max_close_icon" src="/assets/close.svg" alt="" />
             </div>
-            <a href="#" class="restartButton hide">NUEVA CAPTURA</a>
-          </div>
-          
-          
-          <hr class="center_line">
-          <a href="#" class="button_start">COMENZAR</a>
-          <a href="#" class="button_record">GRABAR</a>
-          <a href="#" class="button_stop">DETENER</a>
-          <a href="#" class="button_upload">SUBIR</a>
-  
-        </div>
-        <!-- camara derecha -->
-      <div class="create_rightCamera">
-        <img src="/assets/pelicula.svg" alt="" class="rollo">
-      </div>
-      </div>
-      
+            <img class="img_max" src="" alt="" />
+            <div class="max_foot">
+                <div class="max_text">
+                    <span class="max_user">User</span>
+                    <h4 class="max_title">Titulo</h4>
+                </div>
+                <div class="max__btns">
+                    <img
+                        src="/assets/icon-trash-normal.svg"
+                        onclick="handleMaxClick()"
+                        alt=""
+                        id="addFav_max"
+                    />
+                    <img src="/assets/icon-download.svg" alt="" />
+                </div>
+            </div>
+        </section>
 
-    </section>
+        <!-- CREATE GIF -->
 
+        <section id="create_content" class="hide">
+            <div class="createMain_container">
+                <!-- dibujo camara -->
+                <div class="create_leftCamera">
+                    <img src="/assets/camara.svg" alt="camara" class="camera" />
+                    <img
+                        src="/assets/element-luz-camara.svg"
+                        alt="luz camara"
+                    />
+                </div>
 
+                <!-- parte central -->
+                <div class="create_center">
+                    <!-- pantalla -->
+                    <div class="center_screen">
+                        <div class="screen_topCorners">
+                            <div class="screen_topLeft"></div>
+                            <div class="screen_topRight"></div>
+                        </div>
+                        <div class="screen_main">
+                            <video id="main_video" class="hide"></video>
+                            <img src="" alt="" class="main_gif hide" />
+                            <div class="main_overlay hide">
+                                <div class="overlay_btns hide">
+                                    <button class="btn_over_download"></button>
+                                    <button
+                                        class="btn_over_link"
+                                        onclick="goToMisGif()"
+                                    ></button>
+                                </div>
+                                <img
+                                    src="/assets/loader.svg"
+                                    alt=""
+                                    class="overlay_img"
+                                />
+                                <p class="overlay_text">
+                                    Estamos subiendo tu GIFO
+                                </p>
+                            </div>
+                            <h2 class="screen_title">
+                                Aquí podrás crear tus propios
+                                <span class="screen_span">GIFOS</span>
+                            </h2>
+                            <p class="screen_paragraph">
+                                ¡Crea tu GIFO en sólo 3 pasos! <br />
+                                (sólo necesitas una cámara para grabar un video)
+                            </p>
+                        </div>
+                        <div class="screen_botCorners">
+                            <div class="screen_botLeft"></div>
+                            <div class="screen_botRight"></div>
+                        </div>
+                    </div>
 
-    <!-- MIS GIFOS -->
-    <section id="misGif_content" class="hide">
-      <div class="content_title">
-        <img src="/assets/icon-mis-gifos.svg" alt="" class="content_icon">
-        <h3 class="content_text">Mis GifOs</h3>
-       
-      </div>
-      <div class="misGif_gallery">
+                    <!-- botones -->
+                    <div class="center_buttons_container">
+                        <div class="empty_placeholder"></div>
+                        <div class="center_buttons">
+                            <div class="stepButton step1">1</div>
+                            <div class="stepButton step2">2</div>
+                            <div class="stepButton step3">3</div>
+                        </div>
+                        <a href="#" class="restartButton hide">NUEVA CAPTURA</a>
+                    </div>
 
-      </div>
-      <a href="index.html" class="btn_back">Volver</a>
-    </section>
+                    <hr class="center_line" />
+                    <a href="#" class="button_start">COMENZAR</a>
+                    <a href="#" class="button_record">GRABAR</a>
+                    <a href="#" class="button_stop">DETENER</a>
+                    <a href="#" class="button_upload">SUBIR</a>
+                </div>
+                <!-- camara derecha -->
+                <div class="create_rightCamera">
+                    <img src="/assets/pelicula.svg" alt="" class="rollo" />
+                </div>
+            </div>
+        </section>
 
+        <!-- MIS GIFOS -->
+        <section id="misGif_content" class="hide">
+            <div class="content_title">
+                <img
+                    src="/assets/icon-mis-gifos.svg"
+                    alt=""
+                    class="content_icon"
+                />
+                <h3 class="content_text">Mis GifOs</h3>
+            </div>
+            <div class="misGif_gallery"></div>
+            <a href="index.html" class="btn_back">Volver</a>
+        </section>
 
-    <!-- FAV -->
-    <section id="fav_content" class="hide">
-      <div class="content_title">
-        <img src="/assets/icon-favoritos.svg" alt="" class="content_icon">
-        <h3 class="content_text">Favoritos</h3>
-       
-      </div>
-      <div class="fav_gallery">
+        <!-- FAV -->
+        <section id="fav_content" class="hide">
+            <div class="content_title">
+                <img
+                    src="/assets/icon-favoritos.svg"
+                    alt=""
+                    class="content_icon"
+                />
+                <h3 class="content_text">Favoritos</h3>
+            </div>
+            <div class="fav_gallery"></div>
+            <a href="index.html" class="btn_back">Volver</a>
+        </section>
 
-      </div>
-      <a href="index.html" class="btn_back">Volver</a>
-    </section>
+        <!--------- CONTENT ----------->
+        <section id="content">
+            <div class="search__result hide">
+                <h3 class="result__title"></h3>
+                <div class="result__gallery"></div>
+                <a href="" class="vermas">Ver Mas</a>
+            </div>
+        </section>
 
-    <!--------- CONTENT ----------->
-    <section id="content">
-      <div class="search__result hide">
-        <h3 class="result__title"></h3>
-        <div class="result__gallery"></div>
-        <a href="" class="vermas">Ver Mas</a>
-      </div>
-    </section>
+        <!--------- TRENDING ---------->
+        <section id="trend">
+            <div class="trend__title">
+                <h2>Trending GIFOS</h2>
+                <p>Mira los ultimos GIFOS de nuestra comunidad.</p>
+            </div>
+            <div class="trend_container">
+                <button class="left_arrow" onclick="leftArrowTrend()"></button>
+                <div class="trend__imgs"></div>
+                <button
+                    class="right_arrow"
+                    onclick="rightArrowTrend()"
+                ></button>
+            </div>
+        </section>
 
-    <!--------- TRENDING ---------->
-    <section id="trend">
-      <div class="trend__title">
-        <h2>Trending GIFOS</h2>
-        <p>Mira los ultimos GIFOS de nuestra comunidad.</p>
-      </div>
-      <div class="trend_container">
-        <button class="left_arrow" onclick="leftArrowTrend()"></button>
-        <div class="trend__imgs">
-         
-        </div>
-        <button class="right_arrow" onclick="rightArrowTrend()"></button>
-      </div>
-      
-    </section>
+        <!--------- FOOTER ---------->
+        <section id="footer">
+            <div class="footer_container">
+                <div class="footer__social">
+                    <p>Compartir en:</p>
+                    <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="instagram.com"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p>© GIFOS 2020 All Rights Reserved</p>
+            </div>
+        </section>
+        <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+        <script src="/scripts/DOM.js"></script>
+        <script src="/scripts/main.js"></script>
+        <script src="/scripts/trending.js"></script>
+        <script src="/scripts/misGif.js"></script>
+        <script src="/scripts/search.js"></script>
+        <script src="/scripts/events.js"></script>
 
-    <!--------- FOOTER ---------->
-    <section id="footer">
-      <div class="footer_container">
-        <div class="footer__social">
-          <p>Compartir en:</p>
-          <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
-          <a href="twitter.com"><i class="fab fa-twitter"></i></a>
-          <a href="instagram.com"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>© GIFOS 2020 All Rights Reserved</p>
-      </div>
-      
-    </section>
-    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-    <script src="/scripts/DOM.js"></script>
-    <script src="/scripts/main.js"></script>
-    <script src="/scripts/trending.js"></script>
-    <script src="/scripts/misGif.js"></script>
-    <script src="/scripts/search.js"></script>
-    <script src="/scripts/events.js"></script>
- 
-    <script src="/scripts/fav.js"></script>
-    
-    <script src="/scripts/create.js"></script>
-    <script src="/scripts/darkMode.js"></script>
+        <script src="/scripts/fav.js"></script>
 
-
-  </body>
+        <script src="/scripts/create.js"></script>
+        <script src="/scripts/darkMode.js"></script>
+    </body>
 </html>

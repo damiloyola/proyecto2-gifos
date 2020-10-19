@@ -53,7 +53,7 @@ const autocompleteSearch = async (text) => {
     results.data.forEach((i) => {
         const li = document.createElement("li");
         li.classList.add("recomend__result");
-        li.innerHTML = `<button onclick="search('${i.name}', ${offsetSearch})">${i.name}</button>`;
+        li.innerHTML = `<button onclick="search('${i.name}', 0)">${i.name}</button>`;
         $searchUlRecomend.appendChild(li);
     });
 };
@@ -61,13 +61,12 @@ const autocompleteSearch = async (text) => {
 //funcion que va colocando los gifs del array pasado por parametro dentro de la galeria
 const populateGallery = (arr) => {
     $verMasBtn.style.display = "block";
+    $resultGallery.innerHTML = "";
     if (offsetSearch === 0) {
         document.querySelector(".search__result").classList.remove("hide");
         window.scrollTo({ top: 650, behavior: "smooth" });
     }
-    console.log(arr);
-    $resultGallery.innerHTML = "";
-    console.log(arr);
+
     if (arr.length < 12) {
         $verMasBtn.style.display = "none";
     }
