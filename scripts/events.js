@@ -48,7 +48,7 @@ const goToCreate = () => {
 // ** MAX GIF **//
 const $favMaxBtn = document.getElementById("addFav_max");
 
-const showMax = (url, user, title) => {
+const showMax = (fav, url, user, title) => {
     const $userMax = document.querySelector(".max_user");
     $userMax.innerHTML = user;
     const $titleMax = document.querySelector(".max_title");
@@ -64,19 +64,20 @@ const showMax = (url, user, title) => {
     $footerContainer.classList.add("hide");
     $imgMax.src = url;
     window.scrollTo({ top: 0, behavior: "auto" });
-    if (arrFav.find((element) => element.url === url) == undefined) {
-        $favMaxBtn.src = "/assets/icon-fav.svg";
-        $favMaxBtn.addEventListener("click", () => {
-            addFav(url, user, title);
 
-            showMax(url, user, title);
-        });
-    } else {
+    if (fav == "true") {
         $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+
         $favMaxBtn.addEventListener("click", () => {
             deleteFav(url);
 
-            showMax(url, user, title);
+            goToFav();
+        });
+    } else {
+        $favMaxBtn.src = "/assets/icon-fav.svg";
+
+        $favMaxBtn.addEventListener("click", () => {
+            addFav(url, user, title);
         });
     }
 };
@@ -89,7 +90,7 @@ const closeMax = () => {
     $favContainer.classList.add("hide");
     $misGifContainer.classList.add("hide");
     $createContainer.classList.add("hide");
-
+    $footerContainer.classList.remove("hide");
     window.scrollTo({ top: 650, behavior: "smooth" });
 };
 
