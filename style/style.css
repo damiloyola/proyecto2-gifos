@@ -612,11 +612,6 @@ body.darkMode #trend .trend__title p {
   overflow-x: scroll;
 }
 
-#trend .trend__imgs .left_arrow,
-#trend .trend__imgs .right_arrow {
-  display: none;
-}
-
 #trend .trend__imgs .result_container {
   margin: 20px;
   position: relative;
@@ -628,6 +623,11 @@ body.darkMode #trend .trend__title p {
 }
 
 #trend .trend__imgs .result_container .gif_hover {
+  display: none;
+}
+
+#trend .left_arrow,
+#trend .right_arrow {
   display: none;
 }
 
@@ -645,6 +645,7 @@ body.darkMode #trend .trend__title p {
     padding: 0 20px;
   }
   #trend .trend_container .left_arrow {
+    display: block;
     outline: none;
     border: none;
     min-width: 40px;
@@ -662,6 +663,7 @@ body.darkMode #trend .trend__title p {
     background-image: url(/assets/button-slider-left-hover.svg);
   }
   #trend .trend_container .right_arrow {
+    display: block;
     outline: none;
     border: none;
     min-width: 40px;

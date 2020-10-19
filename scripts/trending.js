@@ -51,7 +51,7 @@ const displayTrendGifs = async (limit) => {
 };
 
 displayTrendGifs(12);
-offsetTrend = 0;
+
 const rightArrowTrend = () => {
     $trendGifs.scrollLeft += 400;
 };
