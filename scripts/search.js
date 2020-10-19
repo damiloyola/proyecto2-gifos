@@ -81,31 +81,17 @@ const populateGallery = (arr) => {
         for (let i = 0; i < arr.length; i++) {
             const div = document.createElement("div");
             div.classList.add("result_container");
-            div.innerHTML = `<img class="gif_result" onclick="showMax('${false}','${
-                arr[i].images.original.url
-            }','${arr[i].username}','${arr[i].title}')" src="${
-                arr[i].images.original.url
-            }" alt="${arr[i].title}"></img>
+            div.innerHTML = `<img class="gif_result" onclick="showMax('nofav','${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')" src="${arr[i].images.original.url}" alt="${arr[i].title}"></img>
                              <div class="gif_hover hide">
                                 <div class="gif_icons">
-                                    <div class="icon iconFav" onclick="addFav('${
-                                        arr[i].images.original.url
-                                    }','${arr[i].username}','${
-                arr[i].title
-            }')"></div>
-                                    <div class="icon iconDownload" onclick="downloadGif('${
-                                        arr[i].images.original.url
-                                    }','${arr[i].title}')" ></div>
-                                    <div class="icon iconBig" onclick="showMax('${false}','${
-                arr[i].images.original.url
-            }','${arr[i].username}','${arr[i].title}')"></div>
+                                    <div class="icon iconFav" onclick="addFav('${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')"></div>
+                                    <div class="icon iconDownload" onclick="downloadGif('${arr[i].images.original.url}','${arr[i].title}')" ></div>
+                                    <div class="icon iconBig" onclick="showMax('nofav','${arr[i].images.original.url}','${arr[i].username}','${arr[i].title}')"></div>
                                                
                                 </div>
                                 <div class="gif_details">
                                     <p class="gif_user">${arr[i].username}</p>
-                                    <h5 class="gif_title">${
-                                        arr[i].title
-                                    }</h5>                          
+                                    <h5 class="gif_title">${arr[i].title}</h5>                          
                                 </div>
                              </div>`;
             $resultGallery.appendChild(div);

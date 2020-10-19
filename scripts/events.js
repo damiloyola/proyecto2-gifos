@@ -1,5 +1,7 @@
 // ** NAVIGATION ** //
 const goToFav = () => {
+    populateFavGif();
+    window.scrollTo({ top: 0, behavior: "auto" });
     $sectionHero.classList.add("hide");
     $misGifContainer.classList.add("hide");
     $createContainer.classList.add("hide");
@@ -7,6 +9,8 @@ const goToFav = () => {
     $mainContainer.classList.add("hide");
     $burgerMenuUl.classList.add("hide");
     $sectionMax.classList.add("hide");
+    $trendContainer.classList.remove("hide");
+    $footerContainer.classList.remove("hide");
     if (localStorage.getItem("mode") === "dark") {
         $burgerBtn.src = "assets/burger-modo-noct.svg";
     } else {
@@ -16,6 +20,7 @@ const goToFav = () => {
 
 const goToMisGif = () => {
     populateMisGif();
+    window.scrollTo({ top: 0, behavior: "auto" });
     $sectionHero.classList.add("hide");
     $favContainer.classList.add("hide");
     $createContainer.classList.add("hide");
@@ -23,6 +28,7 @@ const goToMisGif = () => {
     $misGifContainer.classList.remove("hide");
     $burgerMenuUl.classList.add("hide");
     $sectionMax.classList.add("hide");
+    $footerContainer.classList.remove("hide");
     if (localStorage.getItem("mode") === "dark") {
         $burgerBtn.src = "assets/burger-modo-noct.svg";
     } else {
@@ -46,8 +52,7 @@ const goToCreate = () => {
 };
 
 // ** MAX GIF **//
-const $favMaxBtn = document.getElementById("addFav_max");
-
+let handleMaxClick;
 const showMax = (fav, url, user, title) => {
     const $userMax = document.querySelector(".max_user");
     $userMax.innerHTML = user;
@@ -65,21 +70,56 @@ const showMax = (fav, url, user, title) => {
     $imgMax.src = url;
     window.scrollTo({ top: 0, behavior: "auto" });
 
-    if (fav == "true") {
-        $favMaxBtn.src = "/assets/icon-trash-normal.svg";
-
-        $favMaxBtn.addEventListener("click", () => {
+    if (fav === "fav") {
+        handleMaxClick = () => {
             deleteFav(url);
-
             goToFav();
-        });
+        };
+        $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+    } else if (fav === "gifo") {
+        handleMaxClick = () => {
+            deleteMisGif(url);
+            goToMisGif();
+        };
+        $favMaxBtn.src = "/assets/icon-trash-normal.svg";
     } else {
-        $favMaxBtn.src = "/assets/icon-fav.svg";
-
-        $favMaxBtn.addEventListener("click", () => {
+        handleMaxClick = () => {
             addFav(url, user, title);
-        });
+            closeMax();
+        };
+        $favMaxBtn.src = "/assets/icon-fav.svg";
     }
+
+    // if (fav === "fav") {
+    //     $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+
+    //     $favMaxBtn.addEventListener("click", () => {
+    //         $favMaxBtn.src = "/assets/icon-trash-hover.svg";
+    //         deleteFav(url);
+
+    //         goToFav();
+
+    //         return;
+    //     });
+    // } else if (fav === "gifo") {
+    //     $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+    //     $favMaxBtn.addEventListener("click", () => {
+    //         $favMaxBtn.src = "/assets/icon-trash-hover.svg";
+    //         deleteMisGif(url);
+    //         goToMisGif();
+
+    //         return;
+    //     });
+    // } else {
+    //     $favMaxBtn.src = "/assets/icon-fav.svg";
+
+    //     $favMaxBtn.addEventListener("click", () => {
+    //         $favMaxBtn.src = "/assets/icon-fav-active.png";
+    //         addFav(url, user, title);
+    //         closeMax();
+    //         return;
+    //     });
+    // }
 };
 
 const closeMax = () => {

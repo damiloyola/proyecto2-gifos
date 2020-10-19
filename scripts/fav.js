@@ -34,33 +34,17 @@ const populateFavGif = () => {
         for (let i = 0; i < gifsLocalstorage.length; i++) {
             const gifContainer = document.createElement("div");
             gifContainer.classList.add("result_container_fav");
-            gifContainer.innerHTML = `<img onclick="showMax('${true}','${
-                gifsLocalstorage[i].url
-            }','${gifsLocalstorage[i].user}','${
-                gifsLocalstorage[i].title
-            }')" class="gif_result" src="${gifsLocalstorage[i].url}" alt="${
-                gifsLocalstorage[i].title
-            }"></img>
+            gifContainer.innerHTML = `<img onclick="showMax('fav','${gifsLocalstorage[i].url}','${gifsLocalstorage[i].user}','${gifsLocalstorage[i].title}')" class="gif_result" src="${gifsLocalstorage[i].url}" alt="${gifsLocalstorage[i].title}"></img>
             <div class="gif_hover hide">
                <div class="gif_icons">
-                   <div class="icon iconTrash" onclick="deleteFav('${
-                       gifsLocalstorage[i].url
-                   }')"></div>
-                   <div class="icon iconDownload" onclick="downloadGif('${
-                       gifsLocalstorage[i].url
-                   }','${gifsLocalstorage[i].title}')"></div>
-                   <div class="icon iconBig" onclick="showMax('${true}','${
-                gifsLocalstorage[i].url
-            }','${gifsLocalstorage[i].user}','${
-                gifsLocalstorage[i].title
-            }')"></div>
+                   <div class="icon iconTrash" onclick="deleteFav('${gifsLocalstorage[i].url}')"></div>
+                   <div class="icon iconDownload" onclick="downloadGif('${gifsLocalstorage[i].url}','${gifsLocalstorage[i].title}')"></div>
+                   <div class="icon iconBig" onclick="showMax('fav','${gifsLocalstorage[i].url}','${gifsLocalstorage[i].user}','${gifsLocalstorage[i].title}')"></div>
                               
                </div>
                <div class="gif_details">
                    <p class="gif_user">${gifsLocalstorage[i].user}</p>
-                   <h5 class="gif_title">${
-                       gifsLocalstorage[i].title
-                   }</h5>                          
+                   <h5 class="gif_title">${gifsLocalstorage[i].title}</h5>                          
                </div>
             </div>`;
 

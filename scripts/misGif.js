@@ -66,33 +66,17 @@ const populateMisGif = () => {
         for (let i = 0; i < misGifLocalStorage.length; i++) {
             const gifContainer = document.createElement("div");
             gifContainer.classList.add("result_container_misGif");
-            gifContainer.innerHTML = `<img onclick="showMax('${false}','${
-                misGifLocalStorage[i].url
-            }','${misGifLocalStorage[i].user}','${
-                misGifLocalStorage[i].title
-            }')" class="gif_result" src="${misGifLocalStorage[i].url}" alt="${
-                misGifLocalStorage[i].title
-            }"></img>
+            gifContainer.innerHTML = `<img onclick="showMax('gifo','${misGifLocalStorage[i].url}','${misGifLocalStorage[i].user}','${misGifLocalStorage[i].title}')" class="gif_result" src="${misGifLocalStorage[i].url}" alt="${misGifLocalStorage[i].title}"></img>
             <div class="gif_hover hide">
                <div class="gif_icons">
-                   <div class="icon iconTrash" onclick="deleteMisGif('${
-                       misGifLocalStorage[i].url
-                   }')"></div>
-                   <div class="icon iconDownload" onclick="downloadGif('${
-                       misGifLocalStorage[i].url
-                   }','${misGifLocalStorage[i].title}')"></div>
-                   <div class="icon iconBig" onclick="showMax('${false}','${
-                misGifLocalStorage[i].url
-            }','${misGifLocalStorage[i].user}','${
-                misGifLocalStorage[i].title
-            }')"></div>
+                   <div class="icon iconTrash" onclick="deleteMisGif('${misGifLocalStorage[i].url}')"></div>
+                   <div class="icon iconDownload" onclick="downloadGif('${misGifLocalStorage[i].url}','${misGifLocalStorage[i].title}')"></div>
+                   <div class="icon iconBig" onclick="showMax('gifo','${misGifLocalStorage[i].url}','${misGifLocalStorage[i].user}','${misGifLocalStorage[i].title}')"></div>
                               
                </div>
                <div class="gif_details">
                    <p class="gif_user">${misGifLocalStorage[i].user}</p>
-                   <h5 class="gif_title">${
-                       misGifLocalStorage[i].title
-                   }</h5>                          
+                   <h5 class="gif_title">${misGifLocalStorage[i].title}</h5>                          
                </div>
             </div>`;
 

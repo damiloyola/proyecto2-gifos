@@ -16,6 +16,8 @@ const $sectionMax = document.getElementById("max");
 const $sectionHero = document.getElementById("hero");
 const $closeMax = document.querySelector(".max__close");
 const $closMaxIcon = document.querySelector(".max_close_icon");
+const $favMaxBtn = document.getElementById("addFav_max");
+const $maxBtnContainer = document.querySelector(".max__btns");
 
 //SECTION CONTAINERS
 const $mainContainer = document.getElementById("content");

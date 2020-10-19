@@ -937,6 +937,7 @@ body.darkMode #max .max_foot .max_text .max_title {
 }
 
 #max .max_foot .max__btns img {
+  width: 32px;
   cursor: pointer;
 }
 
