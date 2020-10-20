@@ -1,5 +1,6 @@
 let arrMisGif;
 
+//! FUNCION QUE RECIBE ID Y AGREGA DATOS DEL GIF A ARR DE MIS GIFS
 const fetchIdMiGif = async (id) => {
     let res = await fetch(
         "https://api.giphy.com/v1/gifs?ids=" +
@@ -14,6 +15,7 @@ const fetchIdMiGif = async (id) => {
 
 let arrGifsId;
 
+//! INICIALIZA ARRAY SEGUN LOCALSTORAGE
 if (localStorage.getItem("MisGifs") === null) {
     arrMisGif = [];
     localStorage.setItem("MisGifs", JSON.stringify(arrMisGif));
@@ -21,6 +23,7 @@ if (localStorage.getItem("MisGifs") === null) {
     arrMisGif = JSON.parse(localStorage.getItem("MisGifs"));
 }
 
+//! AGREGA A MIS GIF
 const addMisGif = (url, user, title) => {
     let miGif = {
         user: user,
@@ -36,6 +39,7 @@ const addMisGif = (url, user, title) => {
     populateMisGif();
 };
 
+//! BORRA DE MIS GIF
 const deleteMisGif = (url) => {
     for (let i = 0; i < arrMisGif.length; i++) {
         if (arrMisGif[i].url === url) {
@@ -46,6 +50,7 @@ const deleteMisGif = (url) => {
     populateMisGif();
 };
 
+//! MUESTRA MIS GIFS
 const populateMisGif = () => {
     const misGifLocalStorage = JSON.parse(localStorage.getItem("MisGifs"));
     $misGifGallery.innerHTML = "";

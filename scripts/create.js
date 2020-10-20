@@ -1,5 +1,6 @@
 let recorder;
 
+//! FUNCION PRINCIPAL PARA GRABAR
 const record = () => {
     $step1.classList.add("active");
     $startBtn.style.display = "none";

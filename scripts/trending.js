@@ -5,6 +5,7 @@ let trendingTagsURL =
 let trendingGifURL =
     "https://api.giphy.com/v1/gifs/trending?api_key=eDyIdYyGYjGzyjzBCvahgfJE97JU6hYJ";
 
+//! FETCH SEGUN URL POR PARAMETRO
 const trending = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
@@ -12,6 +13,7 @@ const trending = async (url) => {
     return data;
 };
 
+//! MUESTRA TAGS TRENINDG
 const displayTrendTags = async () => {
     const arr = await trending(trendingTagsURL);
 
@@ -25,6 +27,7 @@ const displayTrendTags = async () => {
 
 displayTrendTags();
 
+//! MUESTRA GIF TRENDING
 const displayTrendGifs = async (limit) => {
     $trendGifs.innerHTML = "";
     const arr = await trending(trendingGifURL + "&limit=" + limit);
