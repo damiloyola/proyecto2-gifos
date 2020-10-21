@@ -29,6 +29,7 @@ const goToMisGif = () => {
     $burgerMenuUl.classList.add("hide");
     $sectionMax.classList.add("hide");
     $footerContainer.classList.remove("hide");
+    $trendContainer.classList.remove("hide");
     if (localStorage.getItem("mode") === "dark") {
         $burgerBtn.src = "assets/burger-modo-noct.svg";
     } else {
