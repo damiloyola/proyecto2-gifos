@@ -65,14 +65,14 @@
                 min-width: 40px;
                 height: 40px;
                 cursor: pointer;
-                background-image: url(assets/button-slider-left.svg);
+                background-image: url("../assets/button-slider-left.svg");
                 &:hover {
-                    background-image: url(assets/button-slider-left-hover.svg);
+                    background-image: url("../assets/button-slider-left-hover.svg");
                 }
                 body.darkMode & {
-                    background-image: url(assets/button-slider-left-md-noct.svg);
+                    background-image: url("../assets/button-slider-left-md-noct.svg");
                     &:hover {
-                        background-image: url(assets/button-slider-left-hover.svg);
+                        background-image: url("../assets/button-slider-left-hover.svg");
                     }
                 }
             }
@@ -83,14 +83,14 @@
                 min-width: 40px;
                 height: 40px;
                 cursor: pointer;
-                background-image: url(assets/button-slider-right.svg);
+                background-image: url("../assets/button-slider-right.svg");
                 &:hover {
-                    background-image: url(assets/button-slider-right-hover.svg);
+                    background-image: url("../assets/button-slider-right-hover.svg");
                 }
                 body.darkMode & {
-                    background-image: url(assets/button-slider-right-md-noct.svg);
+                    background-image: url("../assets/button-slider-right-md-noct.svg");
                     &:hover {
-                        background-image: url(assets/button-slider-right-hover.svg);
+                        background-image: url("../assets/button-slider-right-hover.svg");
                     }
                 }
             }

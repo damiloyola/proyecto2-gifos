@@ -61,10 +61,10 @@
             border-radius: 0 0 27px 27px;
             padding: 2% 12%;
             list-style: none;
-            list-style-image: url("assets/icon-search.svg");
+            list-style-image: url("../assets/icon-search.svg");
             body.darkMode & {
                 border: 1px solid $grey;
-                list-style-image: url("assets/icon-search-mod-noc.svg");
+                list-style-image: url("../assets/icon-search-mod-noc.svg");
             }
             .recomend__result {
                 @extend %roboto-regular;

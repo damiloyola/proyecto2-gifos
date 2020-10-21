@@ -104,15 +104,15 @@
                                 cursor: pointer;
                             }
                             .btn_over_download {
-                                background-image: url("assets/icon-download.svg");
+                                background-image: url("../assets/icon-download.svg");
                                 &:hover {
-                                    background-image: url("assets/icon-download-hover.svg");
+                                    background-image: url("../assets/icon-download-hover.svg");
                                 }
                             }
                             .btn_over_link {
-                                background-image: url("assets/icon-link-normal.svg");
+                                background-image: url("../assets/icon-link-normal.svg");
                                 &:hover {
-                                    background-image: url("assets/icon-link-hover.svg");
+                                    background-image: url("../assets/icon-link-hover.svg");
                                 }
                             }
                         }

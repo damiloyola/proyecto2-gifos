@@ -95,32 +95,32 @@ $dark-grey: #222326;
                 cursor: pointer;
             }
             .iconTrash {
-                background-image: url("assets/icon-trash-normal.svg");
+                background-image: url("../assets/icon-trash-normal.svg");
                 &:hover {
-                    background-image: url("assets/icon-trash-hover.svg");
+                    background-image: url("../assets/icon-trash-hover.svg");
                 }
             }
             .iconFav {
-                background-image: url("assets/icon-fav.svg");
+                background-image: url("../assets/icon-fav.svg");
                 &:hover {
-                    background-image: url("assets/icon-fav-hover.svg");
+                    background-image: url("../assets/icon-fav-hover.svg");
                 }
                 &:active {
-                    background-image: url("assets/icon-fav-active.png");
+                    background-image: url("../assets/icon-fav-active.png");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
             }
             .iconDownload {
-                background-image: url("assets/icon-download.svg");
+                background-image: url("../assets/icon-download.svg");
                 &:hover {
-                    background-image: url("assets/icon-download-hover.svg");
+                    background-image: url("../assets/icon-download-hover.svg");
                 }
             }
             .iconBig {
-                background-image: url("assets/icon-max-normal.svg");
+                background-image: url("../assets/icon-max-normal.svg");
                 &:hover {
-                    background-image: url("assets/icon-max-hover.svg");
+                    background-image: url("../assets/icon-max-hover.svg");
                 }
             }
             img {
