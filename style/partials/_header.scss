@@ -46,18 +46,22 @@
                 }
                 padding: 5% 0;
                 z-index: 2;
-                hr {
-                    width: 10%;
-                    margin: 0 auto;
-                    border: 0.1px solid white;
-                    body.darkMode & {
-                        border: 0.1px solid $light-grey;
-                    }
-                }
+
                 li {
                     padding: 4% 0;
                     a {
                         color: white;
+                    }
+                }
+                .li_hr {
+                    list-style: none;
+                    width: 10%;
+                    margin: 0 auto;
+                    height: 1px;
+                    padding: 0;
+                    border: 1px solid white;
+                    body.darkMode & {
+                        border: 1px solid $light-grey;
                     }
                 }
             }
@@ -94,9 +98,10 @@
                     }
                     padding: 0;
 
-                    hr {
+                    .li_hr {
                         display: none;
                     }
+
                     li {
                         padding: 0;
                         height: 50px;
@@ -138,6 +143,7 @@
                                 body.darkMode & {
                                     background-color: $light-grey;
                                     border: 1px solid white;
+                                    color: $grey;
                                 }
                                 width: 100%;
                                 padding: 0.85rem 3.5rem;

@@ -111,12 +111,14 @@ const verMas = (e) => {
 const hideRecomended = () => {
     $searchUlRecomend.classList.add("hide");
     $searchInput.classList.remove("searching");
-
+    $headerSearchInput.value = "";
     $searchInput.value = "";
     if (localStorage.getItem("mode") === "dark") {
         $searchIcon.src = "assets/icon-search-mod-noc.svg";
+        $headerSearchIcon.src = "assets/icon-search-mod-noc.svg";
     } else {
         $searchIcon.src = "assets/icon-search.svg";
+        $headerSearchIcon.src = "assets/icon-search.svg";
     }
 };
 
@@ -156,8 +158,23 @@ $headerSearchInput.addEventListener("keypress", (e) => {
         hideRecomended();
     }
 });
+$headerSearchInput.addEventListener("input", () => {
+    if ($headerSearchInput.value === "") {
+        if (localStorage.getItem("mode") === "dark") {
+            $headerSearchIcon.src = "assets/icon-search-mod-noc.svg";
+        } else {
+            $headerSearchIcon.src = "assets/icon-search.svg";
+        }
+    } else {
+        if (localStorage.getItem("mode") === "dark") {
+            $headerSearchIcon.src = "assets/close-modo-noct.svg";
+        } else {
+            $headerSearchIcon.src = "assets/close.svg";
+        }
+    }
+});
 $headerSearchIcon.addEventListener("click", () => {
-    search($headerSearchInput.value, offsetSearch);
+    hideRecomended();
 });
 //listeners que muestran resultados recomendados cada vez qeu se presiona una tecla en la barra de busqueda
 // $searchInput.addEventListener("focus", () =>

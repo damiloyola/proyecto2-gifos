@@ -119,41 +119,41 @@ body.darkMode #create_content .createMain_container .create_center .button_uploa
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconTrash {
-  background-image: url("/assets/icon-trash-normal.svg");
+  background-image: url("../assets/icon-trash-normal.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconTrash:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconTrash:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconTrash:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconTrash:hover {
-  background-image: url("/assets/icon-trash-hover.svg");
+  background-image: url("../assets/icon-trash-hover.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconFav {
-  background-image: url("/assets/icon-fav.svg");
+  background-image: url("../assets/icon-fav.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconFav:hover {
-  background-image: url("/assets/icon-fav-hover.svg");
+  background-image: url("../assets/icon-fav-hover.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconFav:active, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconFav:active, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconFav:active, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconFav:active {
-  background-image: url("/assets/icon-fav-active.png");
+  background-image: url("../assets/icon-fav-active.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconDownload {
-  background-image: url("/assets/icon-download.svg");
+  background-image: url("../assets/icon-download.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconDownload:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconDownload:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconDownload:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconDownload:hover {
-  background-image: url("/assets/icon-download-hover.svg");
+  background-image: url("../assets/icon-download-hover.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconBig {
-  background-image: url("/assets/icon-max-normal.svg");
+  background-image: url("../assets/icon-max-normal.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons .iconBig:hover, #content .search__result .result__gallery .result_container .gif_hover .gif_icons .iconBig:hover, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons .iconBig:hover, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons .iconBig:hover {
-  background-image: url("/assets/icon-max-hover.svg");
+  background-image: url("../assets/icon-max-hover.svg");
 }
 
 #trend .trend__imgs .result_container .gif_hover .gif_icons img, #content .search__result .result__gallery .result_container .gif_hover .gif_icons img, #fav_content .fav_gallery .result_container_fav .gif_hover .gif_icons img, #misGif_content .misGif_gallery .result_container_misGif .gif_hover .gif_icons img {
@@ -241,22 +241,25 @@ body.darkMode .header__container #header .header__menu .menu__ul {
   background-color: black;
 }
 
-.header__container #header .header__menu .menu__ul hr {
-  width: 10%;
-  margin: 0 auto;
-  border: 0.1px solid white;
-}
-
-body.darkMode .header__container #header .header__menu .menu__ul hr {
-  border: 0.1px solid #37383c;
-}
-
 .header__container #header .header__menu .menu__ul li {
   padding: 4% 0;
 }
 
 .header__container #header .header__menu .menu__ul li a {
   color: white;
+}
+
+.header__container #header .header__menu .menu__ul .li_hr {
+  list-style: none;
+  width: 10%;
+  margin: 0 auto;
+  height: 1px;
+  padding: 0;
+  border: 1px solid white;
+}
+
+body.darkMode .header__container #header .header__menu .menu__ul .li_hr {
+  border: 1px solid #37383c;
 }
 
 @media (min-width: 800px) {
@@ -298,7 +301,7 @@ body.darkMode .header__container #header .header__menu .menu__ul hr {
     transition: 1s;
     background-color: #37383c;
   }
-  .header__container #header .header__menu .menu__ul hr {
+  .header__container #header .header__menu .menu__ul .li_hr {
     display: none;
   }
   .header__container #header .header__menu .menu__ul li {
@@ -348,6 +351,7 @@ body.darkMode .header__container #header .header__menu .menu__ul hr {
   body.darkMode .header__container #header .header__menu .menu__ul li .header__search input {
     background-color: #37383c;
     border: 1px solid white;
+    color: #9cafc3;
   }
   .header__container #header .header__menu .menu__ul li .header__search .header_search__icon {
     position: absolute;
@@ -357,7 +361,7 @@ body.darkMode .header__container #header .header__menu .menu__ul hr {
             transform: translateY(-50%);
   }
   .header__container #header .header__menu .menu__ul li .btn__menu {
-    background-image: url("/assets/button-crear-gifo.svg");
+    background-image: url("../assets/button-crear-gifo.svg");
     background-size: cover;
     display: block;
     height: 50px;
@@ -369,18 +373,18 @@ body.darkMode .header__container #header .header__menu .menu__ul hr {
   .header__container #header .header__menu .menu__ul li .btn__menu:hover {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    background-image: url("/assets/CTA-crear-gifo-hover.svg");
+    background-image: url("../assets/CTA-crear-gifo-hover.svg");
     border: none;
   }
   .header__container #header .header__menu .menu__ul li .btn__menu:active {
-    background-image: url("/assets/cta-crear-gifo-active.svg");
+    background-image: url("../assets/cta-crear-gifo-active.svg");
   }
   body.darkMode .header__container #header .header__menu .menu__ul li .btn__menu {
-    background-image: url("/assets/CTA-crar-gifo-modo-noc.svg");
+    background-image: url("../assets/CTA-crar-gifo-modo-noc.svg");
     border: none;
   }
   body.darkMode .header__container #header .header__menu .menu__ul li .btn__menu:hover {
-    background-image: url("/assets/CTA-crear-gifo-hover.svg");
+    background-image: url("../assets/CTA-crear-gifo-hover.svg");
     border: none;
   }
 }
@@ -461,12 +465,12 @@ body.darkMode #hero .hero__search input {
   border-radius: 0 0 27px 27px;
   padding: 2% 12%;
   list-style: none;
-  list-style-image: url("/assets/icon-search.svg");
+  list-style-image: url("../assets/icon-search.svg");
 }
 
 body.darkMode #hero .hero__search .search__recomend {
   border: 1px solid #9cafc3;
-  list-style-image: url("/assets/icon-search-mod-noc.svg");
+  list-style-image: url("../assets/icon-search-mod-noc.svg");
 }
 
 #hero .hero__search .search__recomend .recomend__result {
@@ -651,16 +655,16 @@ body.darkMode #trend .trend__title p {
     min-width: 40px;
     height: 40px;
     cursor: pointer;
-    background-image: url(/assets/button-slider-left.svg);
+    background-image: url("../assets/button-slider-left.svg");
   }
   #trend .trend_container .left_arrow:hover {
-    background-image: url(/assets/button-slider-left-hover.svg);
+    background-image: url("../assets/button-slider-left-hover.svg");
   }
   body.darkMode #trend .trend_container .left_arrow {
-    background-image: url(/assets/button-slider-left-md-noct.svg);
+    background-image: url("../assets/button-slider-left-md-noct.svg");
   }
   body.darkMode #trend .trend_container .left_arrow:hover {
-    background-image: url(/assets/button-slider-left-hover.svg);
+    background-image: url("../assets/button-slider-left-hover.svg");
   }
   #trend .trend_container .right_arrow {
     display: block;
@@ -669,16 +673,16 @@ body.darkMode #trend .trend__title p {
     min-width: 40px;
     height: 40px;
     cursor: pointer;
-    background-image: url(/assets/button-slider-right.svg);
+    background-image: url("../assets/button-slider-right.svg");
   }
   #trend .trend_container .right_arrow:hover {
-    background-image: url(/assets/button-slider-right-hover.svg);
+    background-image: url("../assets/button-slider-right-hover.svg");
   }
   body.darkMode #trend .trend_container .right_arrow {
-    background-image: url(/assets/button-slider-right-md-noct.svg);
+    background-image: url("../assets/button-slider-right-md-noct.svg");
   }
   body.darkMode #trend .trend_container .right_arrow:hover {
-    background-image: url(/assets/button-slider-right-hover.svg);
+    background-image: url("../assets/button-slider-right-hover.svg");
   }
   #trend .trend_container .trend__imgs {
     overflow-x: hidden;
@@ -1153,19 +1157,19 @@ body.darkMode #create_content .createMain_container .create_center .center_scree
 }
 
 #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_download {
-  background-image: url("/assets/icon-download.svg");
+  background-image: url("../assets/icon-download.svg");
 }
 
 #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_download:hover {
-  background-image: url("/assets/icon-download-hover.svg");
+  background-image: url("../assets/icon-download-hover.svg");
 }
 
 #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_link {
-  background-image: url("/assets/icon-link-normal.svg");
+  background-image: url("../assets/icon-link-normal.svg");
 }
 
 #create_content .createMain_container .create_center .center_screen .screen_main .main_overlay .overlay_btns .btn_over_link:hover {
-  background-image: url("/assets/icon-link-hover.svg");
+  background-image: url("../assets/icon-link-hover.svg");
 }
 
 #create_content .createMain_container .create_center .center_screen .screen_main .screen_title {
