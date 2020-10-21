@@ -86,7 +86,7 @@ const uploadRecord = async () => {
     )
         .then((res) => res.json())
         .then((gif) => {
-            $imgOverlay.src = "/assets/check.svg";
+            $imgOverlay.src = "assets/check.svg";
             $textOverlay.innerHTML = "Subido con exito!";
             $btnsOverlay.classList.remove("hide");
             console.log(gif);

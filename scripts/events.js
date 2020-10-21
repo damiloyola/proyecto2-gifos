@@ -76,26 +76,26 @@ const showMax = (fav, url, user, title) => {
             deleteFav(url);
             goToFav();
         };
-        $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+        $favMaxBtn.src = "assets/icon-trash-normal.svg";
     } else if (fav === "gifo") {
         handleMaxClick = () => {
             deleteMisGif(url);
             goToMisGif();
         };
-        $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+        $favMaxBtn.src = "assets/icon-trash-normal.svg";
     } else {
         handleMaxClick = () => {
             addFav(url, user, title);
             closeMax();
         };
-        $favMaxBtn.src = "/assets/icon-fav.svg";
+        $favMaxBtn.src = "assets/icon-fav.svg";
     }
 
     // if (fav === "fav") {
-    //     $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+    //     $favMaxBtn.src = "assets/icon-trash-normal.svg";
 
     //     $favMaxBtn.addEventListener("click", () => {
-    //         $favMaxBtn.src = "/assets/icon-trash-hover.svg";
+    //         $favMaxBtn.src = "assets/icon-trash-hover.svg";
     //         deleteFav(url);
 
     //         goToFav();
@@ -103,19 +103,19 @@ const showMax = (fav, url, user, title) => {
     //         return;
     //     });
     // } else if (fav === "gifo") {
-    //     $favMaxBtn.src = "/assets/icon-trash-normal.svg";
+    //     $favMaxBtn.src = "assets/icon-trash-normal.svg";
     //     $favMaxBtn.addEventListener("click", () => {
-    //         $favMaxBtn.src = "/assets/icon-trash-hover.svg";
+    //         $favMaxBtn.src = "assets/icon-trash-hover.svg";
     //         deleteMisGif(url);
     //         goToMisGif();
 
     //         return;
     //     });
     // } else {
-    //     $favMaxBtn.src = "/assets/icon-fav.svg";
+    //     $favMaxBtn.src = "assets/icon-fav.svg";
 
     //     $favMaxBtn.addEventListener("click", () => {
-    //         $favMaxBtn.src = "/assets/icon-fav-active.png";
+    //         $favMaxBtn.src = "assets/icon-fav-active.png";
     //         addFav(url, user, title);
     //         closeMax();
     //         return;
