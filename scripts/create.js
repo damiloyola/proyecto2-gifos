@@ -1,7 +1,7 @@
 let recorder;
 
 //! FUNCION PRINCIPAL PARA GRABAR
-const record = () => {
+const record = async () => {
     $step1.classList.add("active");
     $startBtn.style.display = "none";
     $recordBtn.style.display = "block";
@@ -9,7 +9,7 @@ const record = () => {
     $screenParagraph.innerHTML =
         "El acceso a tu camara será válido sólo por el tiempo que estés creando el GIFO.";
 
-    navigator.mediaDevices
+    await navigator.mediaDevices
         .getUserMedia({
             audio: false,
             video: {
@@ -37,6 +37,7 @@ const record = () => {
                     console.log("started");
                 },
             });
+            console.log(recorder);
         });
 };
 
